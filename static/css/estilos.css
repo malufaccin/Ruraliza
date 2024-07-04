@@ -39,3 +39,35 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+/* sidebar */
+
+body {
+    font-family: Lato, sans-serif;
+}
+.sidebar {
+    width: 250px;
+    background-color: #fdfdfd;
+    padding: 20px;
+    border-right: 1px solid #fdfdfd;
+}
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: #47525E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar ul li a:hover {
+    color: #522E80;
+}
