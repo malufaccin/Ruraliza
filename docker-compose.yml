@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  web:
+    container_name: ruraliza.cachoeiro.es
+    build: .
+    ports:
+      - "8207:8000"
