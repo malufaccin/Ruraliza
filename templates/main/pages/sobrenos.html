@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Meus Dados</title>
     <style>
-        .h1150{
-            height: 1150px;
+        .h1500{
+            height: 1500px;
         }
     </style>
 </head>
@@ -46,84 +46,37 @@
             </div>
         </nav>
         <div class="row">
-            <div class="col-3 h1150 mt-0">
+            <div class="col-3 h1500 mt-0">
                 <h1 class="ms-4 mt-3">Olá Usuário!</h1>
                 <div class="list-group ms-3 mt-3">
-                    <a href="#" class="list-group-item list-group-item-action active fs-6">Meus Dados</a>
+                    <a href="/templates/main/pages/meus_dados.html" class="list-group-item list-group-item-action fs-6">Meus Dados</a>
                     <a href="#" class="list-group-item list-group-item-action fs-6">Endereços</a>
                     <a href="#" class="list-group-item list-group-item-action fs-6">Assinatura</a>
-                    <a href="/templates/main/pages/termos.html" class="list-group-item list-group-item-action fs-6">Termos e Condições</a>
+                    <a href="/templates/main/pages/termos.html" class="list-group-item list-group-item-action  fs-6">Termos e Condições</a>
                     <a href="#" class="list-group-item list-group-item-action fs-6">Avaliação e Feedback</a>
                     <a href="/templates/main/pages/contatos.html" class="list-group-item list-group-item-action fs-6">Conecte-se a Nós</a>
-                    <a href="/templates/main/pages/sobrenos.html" class="list-group-item list-group-item-action fs-6">Sobre RURALIZA</a>
+                    <a href="#" class="list-group-item list-group-item-action active fs-6">Sobre RURALIZA</a>
                     <a href="#" class="list-group-item list-group-item-action fs-6">Trocar Contas</a>
                     <a href="#" class="list-group-item list-group-item-action fs-6">Pedidos</a>
                 </div>
             </div>
-            <div class="col-9 h1150 mt-5 p-4">
-                <div>
-                    <h1>Meus Dados:</h1>
-                </div>
-                <div class="col-10">
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label mt-5">Email:</label>
-                        <input type="txt" name="email" id="email" placeholder="usuario@gmail.com" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
-                    </div>
-                    <div>
-                    <input class="form-check-input" type="checkbox" value="" id="checkboxEmail">
-                        <label class="form-check-label" for="flexCheckChecked">Receber emails Promocionais</label>
-                    </div>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Senha:</label>
-                    <input type="password" name="senha" id="senha" placeholder="*********" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
-                    </div>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Nome Completo:</label>
-                    <input type="txt" name="nomecompleto" id="nomecompleto" placeholder="Erick Coelho" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
-                    </div>
-                        <hr>
-                    <label for="genero" class="form-label">Gênero:</label>
-                    <input class="form-check-input ms-3" type="radio" name="genero" id="masculino" checked><label class="form-check-label me-3" for="flexRadioDefault1">Masculino</label>
-                    <input class="form-check-input" type="radio" name="genero" id="feminino"><label class="form-check-label me-3" for="flexRadioDefault1">Feminino</label>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Data de Nascimento:</label>
-                    <input class="form-control" type="date" name="datanascimento" id="datanascimento" value="2006-03-01" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block">
-                        <i class="bi bi-lock" style="font-size: 35px;"></i>
-                    </div>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Número de Telefone</label>
-                    <input type="txt" name="email" id="email" placeholder="28999007851" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
-                    </div>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">CPF:</label>
-                    <input type="txt" name="email" id="email" placeholder="111.111.111-11" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block">
-                        <i class="bi bi-lock" style="font-size: 35px;"></i>
-                    </div>
-                    <div class="col-2 mt-5">
-                        <button class="btn btn-success fs-1" type="submit">Salvar</button>
-                    </div>
-                </div>
+            <div class="col-9 h1500 mt-5 p-4">
+                    <h4>Sobre Nós</h4>
+                    <p>Bem-vindo ao Ruraliza, onde conectamos diretamente você aos pequenos produtores rurais do Brasil, trazendo o campo para a sua mesa. Nosso objetivo é facilitar o acesso a alimentos frescos, saudáveis e de alta qualidade, cultivados com carinho e dedicação por agricultores locais.</p>
+                    <h4>Nossa Missão</h4>
+                    <p>Em Ruraliza, acreditamos que todos merecem acesso a alimentos nutritivos e sustentáveis. Nossa missão é construir uma ponte entre pequenos produtores rurais e consumidores conscientes, promovendo práticas agrícolas justas e sustentáveis enquanto apoiamos as economias locais.
+                    <h4>O Que Fazemos</h4>
+                    <p>Nossa plataforma online oferece uma experiência de compra conveniente e confiável, onde você pode encontrar uma ampla variedade de produtos frescos diretamente dos agricultores. Desde frutas e legumes orgânicos até produtos artesanais e alimentos processados, garantimos a qualidade e a frescura de cada item disponível em nosso marketplace.</p>
+                    <h4>Por Que Escolher Ruraliza?</h4>
+                    <p>Produtos Frescos e Sustentáveis: Trabalhamos com produtores que utilizam práticas agrícolas responsáveis, oferecendo produtos que são saudáveis para você e para o meio ambiente.</p>
+                    <p>Apoio aos Pequenos Produtores: Ao comprar no nosso marketplace, você está diretamente apoiando pequenos agricultores e suas famílias, ajudando a fortalecer a economia rural.</p>
+                    <p>Transparência e Confiança: Valorizamos a transparência em todas as etapas do processo, desde a origem dos produtos até a entrega na sua porta. Cada produtor é cuidadosamente selecionado e seus métodos de cultivo são verificados.</p>
+                    <p>Facilidade e Conveniência: Nossa plataforma é fácil de usar, permitindo que você faça suas compras de forma rápida e segura, com opções de entrega que se adaptam à sua rotina.</p>
+                    <h4>Nossa História</h4>
+                    <p>Ruraliza nasceu da paixão por alimentos saudáveis e pelo desejo de criar um impacto positivo na vida dos pequenos agricultores e consumidores. Inspirados pelas feiras livres e mercados locais, decidimos criar uma solução moderna que preserva o espírito comunitário e a autenticidade dos alimentos frescos.</p>
+                    <h4>Junte-se a Nós</h4>
+                    <p>Estamos comprometidos em transformar a maneira como você compra e consome alimentos. Junte-se a nós nessa jornada de valorização da agricultura familiar e do consumo consciente. Explore nossa plataforma, descubra produtos incríveis e faça parte de uma comunidade que valoriza a qualidade, a sustentabilidade e o apoio aos pequenos produtores.</p>
+                </p>
             </div>
         </div>
         <footer class="mt-auto text-bg-light p-3 text-left">
