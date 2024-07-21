@@ -12,6 +12,9 @@
         .h1150{
             height: 1150px;
         }
+        .w18{
+            width: 18rem;
+        }
     </style>
 </head>
     <body>
@@ -49,8 +52,8 @@
             <div class="col-12 col-md-3 mt-0">
                 <h1 class="ms-4 mt-3">Olá Usuário!</h1>
                 <div class="list-group ms-3 mt-3">
-                    <a href="#" class="list-group-item list-group-item-action active fs-6">Meus Dados</a>
-                    <a href="#" class="list-group-item list-group-item-action fs-6">Endereços</a>
+                    <a href="/templates/main/pages/meus_dados.html" class="list-group-item list-group-item-action fs-6">Meus Dados</a>
+                    <a href="/templates/main/pages/adicionar_endereco.html" class="list-group-item list-group-item-action active fs-6">Endereços</a>
                     <a href="#" class="list-group-item list-group-item-action fs-6">Assinatura</a>
                     <a href="/templates/main/pages/termos.html" class="list-group-item list-group-item-action fs-6">Termos e Condições</a>
                     <a href="#" class="list-group-item list-group-item-action fs-6">Avaliação e Feedback</a>
@@ -61,69 +64,60 @@
                 </div>
             </div>
             <div class="col-12 col-md-8 h1150 mt-5 p-4 ms-4">
-                <div>
-                    <h1>Meus Dados:</h1>
+                <div class="col-5 d-inline-block">
+                    <h1>Endereços:</h1>
                 </div>
-                <div class="col-10">
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label mt-5">Email:</label>
-                        <input type="txt" name="email" id="email" placeholder="usuario@gmail.com" class="form-control form-control-lg mb-2" readonly>
+                <div class="col-12 col-md-5 d-inline-block">
+                    <a class="text-success" style="text-decoration: none; font-size: 20px;" href="/templates/main/pages/adicionar_endereco.html">+ Adicionar novo endereço</a>
+                </div>
+                <div class="mt-2">
+                    <p class="fs-6">Aqui você cadastra, altera ou exclui seus endereços.</p>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <h3>
+                            Casa 1
+                        </h3>
                     </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
+                    <div class="card-body">
+                        <p>Rua: Nildo Ataíde Pinheiro
+                        <br>nº 46
+                        <br>Bairro: São Luiz Gonzaga
+                        <br>Cidade: Cachoeiro de Itapemirim
+                        <br>CEP: 29306-832
+                        <br>Ponto de Referência: Próximo à escola Juracy Cruz
+                        <p>
+                        <i style="font-size: 20px;" class="bi bi-check"></i>Endereço Principal
+                        </p>
                     </div>
-                    <div>
-                    <input class="form-check-input" type="checkbox" value="" id="checkboxEmail">
-                        <label class="form-check-label" for="flexCheckChecked">Receber emails Promocionais</label>
-                    </div>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Senha:</label>
-                    <input type="password" name="senha" id="senha" placeholder="*********" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
-                    </div>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Nome Completo:</label>
-                    <input type="txt" name="nomecompleto" id="nomecompleto" placeholder="Erick Coelho" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
-                    </div>
-                        <hr>
-                    <label for="genero" class="form-label">Gênero:</label>
-                    <input class="form-check-input ms-3" type="radio" name="genero" id="masculino" checked><label class="form-check-label me-3" for="flexRadioDefault1">Masculino</label>
-                    <input class="form-check-input" type="radio" name="genero" id="feminino"><label class="form-check-label me-3" for="flexRadioDefault1">Feminino</label>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Data de Nascimento:</label>
-                    <input class="form-control" type="date" name="datanascimento" id="datanascimento" value="2006-03-01" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block">
-                        <i class="bi bi-lock" style="font-size: 35px;"></i>
-                    </div>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Número de Telefone</label>
-                    <input type="txt" name="email" id="email" placeholder="28999007851" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
-                    </div>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">CPF:</label>
-                    <input type="txt" name="email" id="email" placeholder="111.111.111-11" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block">
-                        <i class="bi bi-lock" style="font-size: 35px;"></i>
-                    </div>
-                    <div class="col-2 mt-5">
-                        <button class="btn btn-success fs-1" type="submit">Salvar</button>
+                    <div class="card-footer">
+                        <a class="ms-5 text-success" href="#" style="text-decoration: none;">Editar</a>
+                        <a class="ms-5 text-success" href="#" style="text-decoration: none;">Excluir</a>
                     </div>
                 </div>
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <h3>
+                            Casa 2
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Rua: Pedro Gusmão
+                        <br>nº 27
+                        <br>Bairro: São Luiz Gonzaga
+                        <br>Cidade: Cachoeiro de Itapemirim
+                        <br>CEP: 29306-810
+                        <br>Ponto de Referência: Próximo ao comércio do Romildo
+                        <p>
+                            <i style="font-size: 20px;" class="bi bi-x"></i>Endereço Principal
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="ms-5 text-success" href="#" style="text-decoration: none;">Editar</a>
+                        <a class="ms-5 text-success" href="#" style="text-decoration: none;">Excluir</a>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
         <footer class="mt-auto text-bg-light p-3 text-left">

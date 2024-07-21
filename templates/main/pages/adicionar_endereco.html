@@ -49,8 +49,8 @@
             <div class="col-12 col-md-3 mt-0">
                 <h1 class="ms-4 mt-3">Olá Usuário!</h1>
                 <div class="list-group ms-3 mt-3">
-                    <a href="#" class="list-group-item list-group-item-action active fs-6">Meus Dados</a>
-                    <a href="#" class="list-group-item list-group-item-action fs-6">Endereços</a>
+                    <a href="/templates/main/pages/meus_dados.html" class="list-group-item list-group-item-action fs-6">Meus Dados</a>
+                    <a href="/templates/main/pages/adicionar_endereco.html" class="list-group-item list-group-item-action active fs-6">Endereços</a>
                     <a href="#" class="list-group-item list-group-item-action fs-6">Assinatura</a>
                     <a href="/templates/main/pages/termos.html" class="list-group-item list-group-item-action fs-6">Termos e Condições</a>
                     <a href="#" class="list-group-item list-group-item-action fs-6">Avaliação e Feedback</a>
@@ -61,64 +61,39 @@
                 </div>
             </div>
             <div class="col-12 col-md-8 h1150 mt-5 p-4 ms-4">
-                <div>
-                    <h1>Meus Dados:</h1>
+                <div class="col-5 d-inline-block">
+                    <h1>Novo Endereço:</h1>
+                </div>
+                <div class="col-5 d-inline-block">
+                    <a href="#"><i class="bi bi-arrow-return-left text-dark" style="font-size: 40px;"></i></a>
                 </div>
                 <div class="col-10">
                     <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label mt-5">Email:</label>
-                        <input type="txt" name="email" id="email" placeholder="usuario@gmail.com" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
-                    </div>
-                    <div>
-                    <input class="form-check-input" type="checkbox" value="" id="checkboxEmail">
-                        <label class="form-check-label" for="flexCheckChecked">Receber emails Promocionais</label>
+                        <label for="nomedestinatario" class="form-label mt-5">Nome do Destinatário*:</label>
+                        <input type="txt" name="nomedestinatario" id="nomedestinatario" placeholder="Nome Completo" class="form-control form-control-lg mb-2">
                     </div>
                         <hr>
+                    <div class="col-6 d-inline-block">
+                        <label for="cep" class="form-label">CEP*:</label>
+                    <input type="txt" name="senha" id="senha" placeholder="CEP" class="form-control form-control-lg mb-2">
+                    </div>
+                    <div class="col-3 d-inline-block">
+                        <label for="numero" class="form-label">Número*:</label>
+                    <input type="txt" name="numero" id="numero" placeholder="Nº" class="form-control form-control-lg mb-2">
+                    </div>
+                    <div class="col-2">
+                        <a href="#" class="text-success" style="text-decoration: none;">Buscar CEP</a>
+                    </div>
+                    <div class="col-4 mt-4">
+                        <a href="#" class="text-success" style="text-decoration: none;">+ adicionar ponto de referência</a>
+                    </div>
+                    <div class="col-10 form-check form-switch mt-5">
+                        <input class="form-check-input" type="checkbox" id="enderecoPrincipal" style="width: 60px; height: 22px">
+                        <label class="form-check-label ms-3 mt-1" for="flexSwitchCheckDefault">Endereço Principal</label>
+                    </div>
                     <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Senha:</label>
-                    <input type="password" name="senha" id="senha" placeholder="*********" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
-                    </div>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Nome Completo:</label>
-                    <input type="txt" name="nomecompleto" id="nomecompleto" placeholder="Erick Coelho" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
-                    </div>
-                        <hr>
-                    <label for="genero" class="form-label">Gênero:</label>
-                    <input class="form-check-input ms-3" type="radio" name="genero" id="masculino" checked><label class="form-check-label me-3" for="flexRadioDefault1">Masculino</label>
-                    <input class="form-check-input" type="radio" name="genero" id="feminino"><label class="form-check-label me-3" for="flexRadioDefault1">Feminino</label>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Data de Nascimento:</label>
-                    <input class="form-control" type="date" name="datanascimento" id="datanascimento" value="2006-03-01" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block">
-                        <i class="bi bi-lock" style="font-size: 35px;"></i>
-                    </div>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">Número de Telefone</label>
-                    <input type="txt" name="email" id="email" placeholder="28999007851" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block ps-2">
-                        <a href="#">Alterar</a>
-                    </div>
-                        <hr>
-                    <div class="col-9 d-inline-block">
-                        <label for="email" class="form-label">CPF:</label>
-                    <input type="txt" name="email" id="email" placeholder="111.111.111-11" class="form-control form-control-lg mb-2" readonly>
-                    </div>
-                    <div class="col-2 d-inline-block">
-                        <i class="bi bi-lock" style="font-size: 35px;"></i>
+                        <label for="apelido" class="form-label mt-5">Definir Apelido*:</label>
+                        <input type="txt" name="apelido" id="apelido" placeholder="Apelido" class="form-control form-control-lg mb-2">
                     </div>
                     <div class="col-2 mt-5">
                         <button class="btn btn-success fs-1" type="submit">Salvar</button>
