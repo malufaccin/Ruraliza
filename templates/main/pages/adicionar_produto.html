@@ -48,27 +48,32 @@
                     </div>
         </div>
       </nav>
-            <div class="col-11 mx-auto h1400 mt-4">
+            <div class="col-9 mx-auto h1400 mt-4">
                 <div>
                     <h4><a href="/templates/main/pages/index.html"><i class="bi bi-arrow-left-circle-fill me-3" style="font-size: 40px;"></i></a>Voltar</h4>
                 </div>
                 <div class="my-4">
                     <h3>ADICIONAR PRODUTO</h3>
                 </div>
-                <div class="col-6 my-5">
-                    <label for="foto_produto" class="form-label">Foto do Produto</label>
+                <div class="input-group mb-3">
+                  <label for="nome" class="form-label me-2">Nome</label>
+                  <input type="text" class="form-control" id="nome">
+                </div>
+                <div class="input-group mb-3">
+                    <label for="foto_produto" class="form-label me-2">Foto do Produto</label>
                     <input class="form-control" type="file" id="foto_produto">
                 </div>
-                <div class="my-5">
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nome">
+                <div class="input-group mb-3">
+                  <label for="categorias" class="form-label me-2">Categorias</label>
+                  <input type="text" class="form-control" id="categorias">
                 </div>
-                <div class="my-5">
-                    <label for="preco" class="form-label">Preço</label>
-                    <input type="text" class="form-control" id="preco">
+                <div class="input-group mb-3">
+                  <label for="preco" class="form-label me-2">Preço</label>
+                  <span class="input-group-text">R$</span>
+                  <input type="text" class="form-control" id="preco">
                 </div>
-                <div class="my-5">
-                    <label for="medida">Unidade de Medida</label>
+                <div class="input-group mb-3">
+                    <label for="medida" class="form-label me-2">Unidade de Medida</label>
                     <select class="form-select" aria-label="Default select example" id="medida">
                         <option selected></option>
                         <option value="1">Quilogramas</option>
@@ -76,29 +81,25 @@
                         <option value="3">Unidade</option>
                       </select>
                 </div>
-                <div class="my-5">
-                    <label for="estoque" class="form-label">Quantidade em Estoque</label>
+                <div class="input-group mb-3">
+                    <label for="estoque" class="form-label me-2">Quantidade em Estoque</label>
                     <input type="text" class="form-control" id="estoque">
                 </div>
-                <div class="my-5">
-                    <label for="categorias" class="form-label">Categorias</label>
-                    <input type="text" class="form-control" id="categorias">
-                </div>
-                <div class="my-5">
-                    <label for="data_colheita" class="form-label">Data da Colheita</label>
+                <div class="input-group mb-3">
+                    <label for="data_colheita" class="form-label me-2">Data da Colheita</label>
                     <input type="date" class="form-control" id="data_colheita">
                 </div>
-                <div class="my-5">
-                    <label for="descricao_produto" class="form-label">Descrição do Produto</label>
+                <div class="input-group mb-3">
+                    <label for="descricao_produto" class="form-label me-2">Descrição do Produto</label>
                     <textarea class="form-control" id="descricao_produto" rows="3"></textarea>
                 </div>
-                <div class="form-check form-switch my-5">
-                    <input class="form-check-input" type="checkbox" id="SeloVerde">
-                    <label class="form-check-label" for="SeloVerde">Selo Verde</label>
+                <div class="input-group form-check form-switch mb-3">
+                  <label class="form-check-label me-2 fs-4 me-4" for="SeloVerde">Selo Verde</label>
+                  <input class="form-check-input" type="checkbox" id="SeloVerde" checked>
                 </div>
-                <div>
-                    <button class="btn btn-outline-danger">DELETAR</button>
-                    <button class="btn btn-outline-success">SALVAR</button>
+                <div class="col-6 mx-auto">
+                  <button class="btn btn-outline-success m-3 fs-4">SALVAR</button>
+                  <button class="btn btn-outline-danger m-3 fs-4">DELETAR</button>
                 </div>
             </div>
         <footer class="mt-auto text-bg-light p-3 text-left">
