@@ -3,76 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anúncio de Exclusão</title>
     <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/static/lib/bootstrap-icons/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Criar Conta</title>
-    <style>
-      .h572{
-        height: 572px;
-      }
-      .h100{
-        height: 100px;
-      }
-      .h49{
-        height: 49px;
-      }
-      .corroxa{
-        background-color: #5A328C;
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-    <body>
-      <div class="container">
-        <div class="row"> 
-          <header class="col-12 bg-light h100">
-            <div class="col-3 ps-3 pt-3">
-              <img class="p-4" style="width: 225px" src="/static/img/logos/LOGO HORIZONTAL VETOR.png" alt="logo">
-            </div>
-          </header>
-          <div class="col-12 h49 corroxa"></div>
-          <div class="col-12 col-xl-7 h572 corroxa align-content-center mx-auto"><img style="margin-left: 30%; width: 30%" src="/static/img/logos/LOGO REDUZIDA VETOR.png" alt="logo"></div>
-            <div class="col-12 col-xl-4 h572">
-              <form>
-                <div class="col-8 mt-5 mb-4 mx-auto px-auto">
-                    <h1 class="display-5 text-center fw-semibold" style="color: #47525E; font-size: 250%;">Criar Conta</h1>
-                </div>
-                <div class="col-12 mb-3 mt-0 mx-auto">
-                    <label for="nomecompleto" class="form-label">CPR:</label>
-                    <input type="txt" name="cpr" id="cpr" placeholder="CPR" class="form-control form-control-lg">
-                </div>
-                <div class="row col-12">
-                    <div class="col-9 mb-3 mx-auto ">
-                        <label for="endereco" class="form-label">Endereço:</label>
-                        <input type="txt" name="endereco" id="endereco" placeholder="CEP[XX.XXX-XXX]" class="form-control form-control-lg">
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid py-4" style="background-color: #88ca72;">
+                    <img src="/static/img/logos/LOGO HORIZONTAL VETOR.png" alt="logo" style="width: 125px;" class="ms-4">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ms-3 my-auto">
+                            <a class="nav-link fs-5" aria-current="page" href="#"><i style="font-size: 20px;" class="bi bi-map mx-2"></i>Informar CEP</a>
+                        </li>
+                        <li class="nav-item ms-3 my-auto">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                            </form>
+                        </li>
+                        <li class="nav-item ms-5 my-auto">
+                              <a class="nav-link fs-5" aria-current="page" href="/templates/main/pages/login.html">Entrar</a>
+                        </li>
+                        <li class="nav-item ms-3 my-auto">
+                            <a class="nav-link fs-5" aria-current="page" href="/templates/main/pages/selecionar_tipo_perfil.html">Criar Conta</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" aria-current="page" href="/templates/main/pages/pedidos.html"><i style="font-size: 30px;" class="bi bi-basket2"></i></a>
+                        </li>
+                        </ul>
                     </div>
-                    <div class="col-3 mx-auto">
-                        <label for="numero" class="form-label">Número:</label>
-                        <input type="txt" name="numero" id="numero" placeholder="N°" class="form-control form-control-lg">
-                    </div>
-                </div>
-                <div class="col-12 mb-3 mx-auto">
-                    <label for="cpf" class="form-label">CNPJ:</label>
-                    <input type="txt" name="cnpj" id="cnpj" placeholder="CNPJ[XX.XXX.XXX/0001-XX]" class="form-control form-control-lg">
-                </div>
-                <div class="row col-12 ms-auto me-4 mt-5">
-                  <div class="col-3">
-                    <a href="/templates/main/pages/criar_conta_produtor2.html" class="btn btn-success btn-lg text-dark" style="font-size: 30px;"><i class="bi bi-caret-left-fill"></i></a>
-                  </div>
-                    <div class="col-6 text-center align-content-center">
-                        <h4>3/3</h4>
-                    </div>
-                    <div class="col-3">
-                        <button type="submit" class="btn btn-success btn-lg text-dark" style="font-size: 30px;"><i class="bi bi-caret-right-fill"></i></button>
-                    </div>
-                </div>
-              </form>
-            </div>
-          <div class="col-12 col-xl-1 corroxa h572"></div>
-          <div class="col-12 h49 corroxa"></div>
         </div>
-      </div>
-      <footer class="mt-auto text-bg-light p-3 text-left">
+    </nav>
+    <div class="container" style="background-color: #C3D7BD;
+    border-radius: 10px;
+    width: 1073px;
+    height: 619px;
+    padding:15px;">
+        <div class="card">
+            <div class="card-header bg-white">
+                <h5 class="card-title text-danger d-flex align-items-center" style="margin-top: 5px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3-fill me-2" viewBox="0 0 16 16">
+                        <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
+                    </svg>
+                    ANUNCIO DE EXCLUSÃO
+                </h5>
+            </div>
+            <div class="card-body" style="background-color: #f3f3f3;">
+                <!-- Formulário -->
+                <form>
+                    <div class="mb-3">
+                        <label for="exclusionMessage" class="form-label">Mensagem de Exclusão</label>
+                        <textarea class="form-control" id="exclusionMessage" rows="17" placeholder="Digite a mensagem de exclusão aqui..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Excluir</button>
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer class="mt-auto text-bg-light p-3 text-left">
         <br>
         <div class="container" style="text-align:left; ">
           <div class="row">
@@ -106,6 +104,6 @@
             </div>
         </div>
         </div>
-      </footer>
-  </body>
+  </footer>
+</body>
 </html>
