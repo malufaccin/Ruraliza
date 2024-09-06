@@ -22,3 +22,199 @@ async def get_root(request: Request):
 @router.get("/login", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/login.html", {"request": request})
+
+@router.get("/frutas", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/categoria_frutas.html", {"request": request})
+
+@router.get("/cesta", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/cesta.html", {"request": request})
+
+@router.get("/adicionar_endereco", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/adicionar_endereco.html", {"request": request})
+
+@router.get("/adicionar_produto", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/adicionar_produto.html", {"request": request})
+
+@router.get("/assinar", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/assinar.html", {"request": request})
+
+@router.get("/avaliar", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/avaliar.html", {"request": request})
+
+@router.get("/avaliar2", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/avaliar_2.html", {"request": request})
+
+@router.get("/bemvindo", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/bemvindo.html", {"request": request})
+
+@router.get("/cadastrar_categorias", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/cadastrar_categorias.html", {"request": request})
+
+@router.get("/categoria_frutas", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/categoria_frutas.html", {"request": request})
+
+@router.get("/contatos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/contatos.html", {"request": request})
+
+@router.get("/criar_conta_cliente1", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/criar_conta_cliente1.html", {"request": request})
+
+@router.get("/criar_conta_cliente2", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/criar_conta_cliente2.html", {"request": request})
+
+@router.get("/criar_conta_entregador1", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/criar_conta_entregador1.html", {"request": request})
+
+@router.get("/criar_conta_entregador2", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/criar_conta_entregador2.html", {"request": request})
+
+@router.get("/criar_conta_entregador3", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/criar_conta_entregador3.html", {"request": request})
+
+@router.get("/criar_conta_produtor1", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/criar_conta_produtor1.html", {"request": request})
+
+@router.get("/criar_conta_produtor2", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/criar_conta_produtor2.html", {"request": request})
+
+@router.get("/criar_conta_produtor3", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/criar_conta_produtor3.html", {"request": request})
+
+@router.get("/cupons", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/cupons.html", {"request": request})
+
+@router.get("/editar_conta", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/editar_conta.html", {"request": request})
+
+@router.get("/enderecos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/enderecos.html", {"request": request})
+
+@router.get("/fazer_pedido", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/fazer_pedido.html", {"request": request})
+
+@router.get("/feedback", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/feedback.html", {"request": request})
+
+@router.get("/finalizar_entrega", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/finalizar_entrega.html", {"request": request})
+
+@router.get("/gerenciar_anuncios", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/gerenciar_anuncios.html", {"request": request})
+
+@router.get("/gerenciar_contas", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/gerenciar_contas.html", {"request": request})
+
+@router.get("/meus_dados", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/meus_dados.html", {"request": request})
+
+@router.get("/lista_mensagens", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/lista_mensagens.html", {"request": request})
+
+@router.get("/lista_pedidos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/lista_pedidos.html", {"request": request})
+
+@router.get("/lista_produtos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/lista_produtos.html", {"request": request})
+
+@router.get("/montar_box", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/montar_box.html", {"request": request})
+
+@router.get("/mudar_conta", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/mudar_conta.html", {"request": request})
+
+@router.get("/pagina_entregas", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/pagina_entregas.html", {"request": request})
+
+@router.get("/pedidos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/pedidos.html", {"request": request})
+
+@router.get("/perfil_administrador", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/perfil_administrador.html", {"request": request})
+
+@router.get("/perfil_entregador", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/perfil_entregador.html", {"request": request})
+
+@router.get("/perfil_produtor", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/perfil_produtor.html", {"request": request})
+
+@router.get("/perfil_usuario", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/perfil_usuario.html", {"request": request})
+
+@router.get("/perfis_seguindo", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/perfis_seguindo.html", {"request": request})
+
+@router.get("/pesquisa", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/pesquisa.html", {"request": request})
+
+@router.get("/produto", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/produto.html", {"request": request})
+
+@router.get("/rastreio_enviado", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/rastreio_enviado.html", {"request": request})
+
+@router.get("/rastreio", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/rastreio.html", {"request": request})
+
+@router.get("/selecionar_tipo_perfil", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/selecionar_tipo_perfil.html", {"request": request})
+
+@router.get("/sobrenos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/sobrenos.html", {"request": request})
+
+@router.get("/termos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/termos.html", {"request": request})
+
+@router.get("/vendedor", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/vendedor.html", {"request": request})
+
+@router.get("/visualizar_entrega", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/visualizar_entrega.html", {"request": request})
