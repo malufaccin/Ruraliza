@@ -71,7 +71,7 @@ def configurar_excecoes(app: FastAPI):
             "detail": "Erro na requisição HTTP.",
         }
         return templates.TemplateResponse(
-            "pages/error.html",
+            "pages/erro.html",
             view_model,
             status_code=ex.status_code,
         )
@@ -86,7 +86,7 @@ def configurar_excecoes(app: FastAPI):
             "detail": "Erro interno do servidor.",
         }
         return templates.TemplateResponse(
-            "pages/error.html",
+            "pages/erro.html",
             view_model,
             status_code=500,
         )
