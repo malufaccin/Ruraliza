@@ -1,0 +1,311 @@
+{% extends "shared/pages/base.html" %}
+
+{% block subtitulo %}Página Principal{% endblock %}
+
+{% block conteudo %}
+<div class="col-11 mx-auto">
+  <div class="my-3">
+    <a class="me-3" href="#"><img src="/static/img/banners/banner1.png" alt="banner1" style="width: 55%;"></a>
+    <a href="/cupons"><img src="/static/img/banners/banner2.png" alt="banner2" style="width: 37%;"></a>
+  </div>
+  <div class="my-5 ms-5">
+    <h3>CATEGORIAS</h3>
+  </div>
+  <div class="col-12">
+    <div class="col-3 btn-group-vertical mx-5 my-3" aria-label="Basic example">
+      <a href="/categoria_frutas" type="button" class="btn"><img src="/static/img/icones/frutas.png"
+          style="width: 70%;"></a>
+      <a href="/categoria_vegetais" type="button" class="btn"><img src="/static/img/icones/vegetais.png" style="width: 70%;"></a>
+    </div>
+    <div class="col-3 btn-group-vertical mx-5 my-3" aria-label="Basic example">
+      <a href="/categoria_temperos" type="button" class="btn"><img src="/static/img/icones/temperos.png" style="width: 50%;"></a>
+      <a href="/categoria_compotas" type="button" class="btn"><img src="/static/img/icones/compotas.png" style="width: 50%;"></a>
+    </div>
+    <div class="col-3 btn-group-vertical mx-5 my-3" aria-label="Basic example">
+      <a href="/categoria_graos" type="button" class="btn"><img src="/static/img/icones/graos.png" style="width: 50%;"></a>
+      <a href="/categoria_laticinios" type="button" class="btn"><img src="/static/img/icones/laticinios.png" style="width: 50%;"></a>
+    </div>
+  </div>
+  <div>
+    <h3 class="ms-5 my-5 pt-5">DOCES E COMPOTAS</h3>
+  </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-6 g-3 mx-5 my-3">
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0000.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Doce de Leite</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$28,00/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Sebastião</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0001.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Doce de Figo</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$31,80/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Augusto</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0002.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Doce de Laranja</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$30,50/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Rosimere</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0003.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Doce de Abobora</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$28,00/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Frederico</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0004.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Goiabada</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$26,00/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Dona Maria</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0005.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Ambrosia</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$27,00/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Fazenda Leste</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-6 g-3 mx-5 my-3">
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0006.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Bananada</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$26,00/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Casa do Campo</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0007.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Doce de Mamão</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$29,80/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Casa do Tempero</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0008.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Papos de Anjo</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$30,90/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Olavo</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0009.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Pêssego em Calda</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$30,99/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Produções M.</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0010.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Geleia de Pimenta</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$35,00/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Produções M.</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0011.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Geleia de Morango</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$34,98/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Medicina Alternativa</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-6 g-3 mx-5 my-3">
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0012.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Geleia de Frutas marelas</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$33,90/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Pomar Pessoal</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0013.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Pimenta em Conserva</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$28,59/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">compotas em Casa</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0014.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Compota de Cereja</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$9,69/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Cheiro Verde</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0015.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Palmito</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$20,99/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Fritas em Casa</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0016.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Azeitona</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$24,00/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Sebastião</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="width: 100%;" src="/static/img/produtos/compotas/0017.jpg" class="card-img-top" alt="...">
+        <div class="card-body row">
+          <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+              class="fs-6 text-dark fw-bold">Champignon em Conserva</a></div>
+          <div class="col-6 text-end">
+            <h6 class="pt-1">R$9,00/Un</h6>
+          </div>
+          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+            <h6 class="pt-1">Sebastião</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-1 mx-auto my-5">
+    <a href="/cupons" style="font-size: 100%;" class="btn btn-outline-dark">VER MAIS</a>
+  </div>
+</div>
+{% endblock %}
