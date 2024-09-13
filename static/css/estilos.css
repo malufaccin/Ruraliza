@@ -206,3 +206,19 @@ body {
 .h800{
     height: 800px;
 }
+
+.h572 {
+    height: 572px;
+  }
+
+  .h100 {
+    height: 100px;
+  }
+
+  .h49 {
+    height: 49px;
+  }
+
+  .corroxa {
+    background-color: #5A328C;
+  }
