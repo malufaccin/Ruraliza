@@ -2,43 +2,52 @@
 
 {% block subtitulo %}Página Principal{% endblock %}
 
-{% block conteudo %} 
+{% block conteudo %}
 
-   
-        <div class="row">
-            <div class="col-md-3 mt-4">
-                <a style="text-decoration: none;" href="/perfil_administrador" class="fs-3 ms-4 text-dark"> < Voltar</a>
-                <div class="list-group ms-3 mt-3">
-                    <a href="/gerenciar_categorias" class="list-group-item list-group-item-action fs-6 active">Gerenciar Categorias</a>
-                    <a href="/gerenciar_contas" class="list-group-item list-group-item-action fs-6">Gerenciar Contas</a>
-                    <a href="/gerenciar_anuncios" class="list-group-item list-group-item-action fs-6">Gerenciar Anúncios</a>
-                    <a href="#" class="list-group-item list-group-item-action  fs-6">Chamados</a>
-                </div>
-            </div>
-            <div class="col-md-7 h600 mt-5 p-5">
-              <div class="col-8 h50 d-inline-block">
-                <input type="text" class="form-control bg-success bg-opacity-50" placeholder="Insira a nova categoria">
-              </div>
-              <div class="col-3 h50 d-inline-block">
-                <button class="btn btn-outline-success">Adicionar</button>
-              </div>
-              <div class="col-10">
-                <input class="form-control" type="text" placeholder="Adicione filtros relacionados">
-              </div>
-              <div class="col-10 mt-5">
-                <h4>Lista de Categorias</h4>
-              </div>
-              <div class="col-10">
-                <ul class="list-group">
-                    <li class="list-group-item">Frutas<button class="btn"><i style="font-size: 30px; color:red" class="ps-5 bi bi-trash"></i></button></li>
-                    <li class="list-group-item">Legumes<button class="btn"><i style="font-size: 30px; color:red" class="ms-5 bi bi-trash"></i></button></li>
-                    <li class="list-group-item">Verduras<button class="btn"><i style="font-size: 30px; color:red" class="ms-5 bi bi-trash"></i></button></li>
-                    <li class="list-group-item">Temperos<button class="btn"><i style="font-size: 30px; color:red" class="ms-5 bi bi-trash"></i></button></li>
-                    <li class="list-group-item">Latcínios<button class="btn"><i style="font-size: 30px; color:red" class="ms-5 bi bi-trash"></i></button></li>
-                    <li class="list-group-item">Compotas<button class="btn"><i style="font-size: 30px; color:red" class="ms-5 bi bi-trash"></i></button></li>
-                    <li class="list-group-item">Grãos<button class="btn"><i style="font-size: 30px; color:red" class="ms-5 bi bi-trash"></i></button></li>
-                  </ul>
-              </div>
-            </div>
+
+<div class="row">
+  <div class="col-md-3 mt-4">
+    <a style="text-decoration: none;" href="/perfil_administrador" class="fs-3 ms-4 text-dark">
+      < Voltar</a>
+        <div class="list-group ms-3 mt-3">
+          <a href="/gerenciar_categorias" class="list-group-item list-group-item-action fs-6 active">Gerenciar
+            Categorias</a>
+          <a href="/gerenciar_contas" class="list-group-item list-group-item-action fs-6">Gerenciar Contas</a>
+          <a href="/gerenciar_anuncios" class="list-group-item list-group-item-action fs-6">Gerenciar Anúncios</a>
+          <a href="#" class="list-group-item list-group-item-action  fs-6">Chamados</a>
         </div>
-        {% endblock %}
+  </div>
+  <div class="col-md-7 h600 mt-5 p-5">
+    <div class="col-8 h50 d-inline-block">
+      <input type="text" class="form-control bg-success bg-opacity-50" placeholder="Insira a nova categoria">
+    </div>
+    <div class="col-3 h50 d-inline-block">
+      <button class="btn btn-outline-success">Adicionar</button>
+    </div>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Adicione filtros relacionados">
+    </div>
+    <div class="col-10 mt-5">
+      <h4>Lista de Categorias</h4>
+    </div>
+    <div class="col-10">
+      <ul class="list-group">
+        <li class="list-group-item">Frutas<button class="btn"><i style="font-size: 30px; color:red"
+              class="ps-5 bi bi-trash"></i></button></li>
+        <li class="list-group-item">Legumes<button class="btn"><i style="font-size: 30px; color:red"
+              class="ms-5 bi bi-trash"></i></button></li>
+        <li class="list-group-item">Verduras<button class="btn"><i style="font-size: 30px; color:red"
+              class="ms-5 bi bi-trash"></i></button></li>
+        <li class="list-group-item">Temperos<button class="btn"><i style="font-size: 30px; color:red"
+              class="ms-5 bi bi-trash"></i></button></li>
+        <li class="list-group-item">Latcínios<button class="btn"><i style="font-size: 30px; color:red"
+              class="ms-5 bi bi-trash"></i></button></li>
+        <li class="list-group-item">Compotas<button class="btn"><i style="font-size: 30px; color:red"
+              class="ms-5 bi bi-trash"></i></button></li>
+        <li class="list-group-item">Grãos<button class="btn"><i style="font-size: 30px; color:red"
+              class="ms-5 bi bi-trash"></i></button></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

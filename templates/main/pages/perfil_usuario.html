@@ -2,153 +2,183 @@
 
 {% block subtitulo %}Página Principal{% endblock %}
 
-{% block conteudo %} 
-   
-            <div class="col-11 mx-auto h1150 mt-4">
-                <div>
-                    <h4>Olá, José!</h4>
-                </div>
-                <div class="row h200 bg-secondary bg-opacity-25 my-5">
-                    <div class="col-3">
-                        <a href="/cupons"><i style="font-size: 70px; color: black" class="bi bi-ticket-perforated p-3"></i></a>
-                        <h5 class="ms-3">Cupons</h5>
-                    </div>
-                    <div class="col-3">
-                        <a href="#"><i style="font-size: 70px; color: black" class="bi bi-coin p-3"></i></a>
-                        <h5 class="ms-3">Moedas</h5>
-                    </div>
-                    <div class="col-3">
-                        <a href="#"><i style="font-size: 70px; color: black" class="bi bi-wallet2 p-3"></i></a>
-                        <h5 class="ms-3">Carteira</h5>
-                    </div>
-                    <div class="col-3">
-                        <a href="/perfis_seguindo"><i style="font-size: 70px; color: black" class="bi bi-people p-3"></i></a>
-                        <h5 class="ms-1">Seguindo</h5>
-                    </div>
-                </div>
-                <div class="row h300 bg-secondary bg-opacity-25 my-5">
-                    <div class="col-6 h50 pt-3 ps-5">
-                        <h3>Meus Pedidos</h3>
-                    </div>
-                    <div class="col-5 h50 text-end pt-2 pe-3">
-                        <a class="text-dark fs-3" style="text-decoration: none;" href="/pedidos">Veja Tudo ></a>
-                    </div>
-                    <div class="col-3 h250 pt-4">
-                        <a href="/pedidos"><i style="font-size: 70px; color: black" class="bi bi-box-seam p-3"></i></a>
-                        <h5>Processando</h5>
-                    </div>
-                    <div class="col-3 h250 pt-4">
-                        <a href="/pedidos"><i style="font-size: 70px; color: black" class="bi bi-bicycle p-3"></i></a>
-                        <h5 class="ms-3">Enviando</h5>
-                    </div>
-                    <div class="col-3 h250 pt-4">
-                        <a href="/avaliar"><i style="font-size: 70px; color: black" class="bi bi-star p-3"></i></a>
-                        <h5 class="ms-3">Avaliar</h5>
-                    </div>
-                    <div class="col-3 h250 pt-4">
-                        <a href="/lista_mensagens"><i style="font-size: 70px; color: black" class="bi bi-chat-square-dots p-3"></i></a>
-                        <h5>Mensagens</h5>
-                    </div>
-                </div>
-                <div class="row h300 bg-secondary bg-opacity-25 my-5">
-                    <div class="col-12 h50 pt-3 ps-5">
-                        <h3>Assinatura</h3>
-                    </div>
-                    <div class="col-4 h250 pt-4">
-                        <a href="/assinar"><i style="font-size: 70px; color: black" class="bi bi-vector-pen p-1"></i></a>
-                        <h5>Assinar</h5>
-                    </div>
-                    <div class="col-4 h250 pt-4">
-                        <a href="/montar_box"><i style="font-size: 70px; color: black" class="bi bi-archive p-3"></i></a>
-                        <h5 class="ms-1">Criar Caixa</h5>
-                    </div>
-                    <div class="col-4 h250 pt-4">
-                        <a href="#"><i style="font-size: 70px; color: black" class="bi bi-bell p-3"></i></a>
-                        <h5>Notificações</h5>
-                    </div>
-                </div>
-                <div class="row h1000 bg-secondary bg-opacity-25 my-5">
-                    <div class="col-6 h50 pt-3 ps-5">
-                        <h3>Favoritos</h3>
-                    </div>
-                    <div class="col-5 h50 text-end pt-2 pe-5">
-                        <a class="text-dark fs-3" style="text-decoration: none;" href="/pedidos">Veja Tudo ></a>
-                    </div>
-                    <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-3">
-                        <div class="col">
-                          <div class="card">
-                            <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
-                            <div class="card-body row">
-                              <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Quiabo</a></div>
-                              <div class="col-6 text-end"><h6 class="pt-1">R$5,29</h6></div>
-                              <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Sebastião</h6></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                              <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
-                              <div class="card-body row">
-                                <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Quiabo</a></div>
-                                <div class="col-6 text-start"><h6 class="pt-1">R$5,29</h6></div>
-                                <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Sebastião</h6></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card">
-                              <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
-                              <div class="card-body row">
-                                <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Quiabo</a></div>
-                                <div class="col-6 text-end"><h6 class="pt-1">R$5,29</h6></div>
-                                <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Sebastião</h6></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card">
-                              <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
-                              <div class="card-body row">
-                                <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Quiabo</a></div>
-                                <div class="col-6 text-end"><h6 class="pt-1">R$5,29</h6></div>
-                                <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Sebastião</h6></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card">
-                              <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
-                              <div class="card-body row">
-                                <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Quiabo</a></div>
-                                <div class="col-6 text-end"><h6 class="pt-1">R$5,29</h6></div>
-                                <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Sebastião</h6></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card">
-                              <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
-                              <div class="card-body row">
-                                <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Quiabo</a></div>
-                                <div class="col-6 text-end"><h6 class="pt-1">R$5,29</h6></div>
-                                <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Sebastião</h6></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                </div>
-                <div class="row h300 bg-secondary bg-opacity-25 my-5">
-                    <div class="col-12 h50 pt-3 ps-5">
-                        <h3>Mais Serviços</h3>
-                    </div>
-                    <div class="col-6 h250 pt-4 text-end">
-                        <a href="#"><i style="font-size: 70px; color: black" class="bi bi-headset p-5 me-2"></i></a>
-                        <h5 class="me-5">Mais Serviços</h5>
-                    </div>
-                    <div class="col-6 h250 pt-4">
-                        <a href="#"><i style="font-size: 70px; color: black" class="bi bi-file-earmark-text p-5 ms-4"></i></a>
-                        <h5 class="ms-4">Sugestões e Reclamações</h5>
-                    </div>
-                </div>
+{% block conteudo %}
+
+<div class="col-11 mx-auto h1150 mt-4">
+  <div>
+    <h4>Olá, José!</h4>
+  </div>
+  <div class="row h200 bg-secondary bg-opacity-25 my-5">
+    <div class="col-3">
+      <a href="/cupons"><i style="font-size: 70px; color: black" class="bi bi-ticket-perforated p-3"></i></a>
+      <h5 class="ms-3">Cupons</h5>
+    </div>
+    <div class="col-3">
+      <a href="#"><i style="font-size: 70px; color: black" class="bi bi-coin p-3"></i></a>
+      <h5 class="ms-3">Moedas</h5>
+    </div>
+    <div class="col-3">
+      <a href="#"><i style="font-size: 70px; color: black" class="bi bi-wallet2 p-3"></i></a>
+      <h5 class="ms-3">Carteira</h5>
+    </div>
+    <div class="col-3">
+      <a href="/perfis_seguindo"><i style="font-size: 70px; color: black" class="bi bi-people p-3"></i></a>
+      <h5 class="ms-1">Seguindo</h5>
+    </div>
+  </div>
+  <div class="row h300 bg-secondary bg-opacity-25 my-5">
+    <div class="col-6 h50 pt-3 ps-5">
+      <h3>Meus Pedidos</h3>
+    </div>
+    <div class="col-5 h50 text-end pt-2 pe-3">
+      <a class="text-dark fs-3" style="text-decoration: none;" href="/pedidos">Veja Tudo ></a>
+    </div>
+    <div class="col-3 h250 pt-4">
+      <a href="/pedidos"><i style="font-size: 70px; color: black" class="bi bi-box-seam p-3"></i></a>
+      <h5>Processando</h5>
+    </div>
+    <div class="col-3 h250 pt-4">
+      <a href="/pedidos"><i style="font-size: 70px; color: black" class="bi bi-bicycle p-3"></i></a>
+      <h5 class="ms-3">Enviando</h5>
+    </div>
+    <div class="col-3 h250 pt-4">
+      <a href="/avaliar"><i style="font-size: 70px; color: black" class="bi bi-star p-3"></i></a>
+      <h5 class="ms-3">Avaliar</h5>
+    </div>
+    <div class="col-3 h250 pt-4">
+      <a href="/lista_mensagens"><i style="font-size: 70px; color: black" class="bi bi-chat-square-dots p-3"></i></a>
+      <h5>Mensagens</h5>
+    </div>
+  </div>
+  <div class="row h300 bg-secondary bg-opacity-25 my-5">
+    <div class="col-12 h50 pt-3 ps-5">
+      <h3>Assinatura</h3>
+    </div>
+    <div class="col-4 h250 pt-4">
+      <a href="/assinar"><i style="font-size: 70px; color: black" class="bi bi-vector-pen p-1"></i></a>
+      <h5>Assinar</h5>
+    </div>
+    <div class="col-4 h250 pt-4">
+      <a href="/montar_box"><i style="font-size: 70px; color: black" class="bi bi-archive p-3"></i></a>
+      <h5 class="ms-1">Criar Caixa</h5>
+    </div>
+    <div class="col-4 h250 pt-4">
+      <a href="#"><i style="font-size: 70px; color: black" class="bi bi-bell p-3"></i></a>
+      <h5>Notificações</h5>
+    </div>
+  </div>
+  <div class="row h1000 bg-secondary bg-opacity-25 my-5">
+    <div class="col-6 h50 pt-3 ps-5">
+      <h3>Favoritos</h3>
+    </div>
+    <div class="col-5 h50 text-end pt-2 pe-5">
+      <a class="text-dark fs-3" style="text-decoration: none;" href="/pedidos">Veja Tudo ></a>
+    </div>
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-3">
+      <div class="col">
+        <div class="card">
+          <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Quiabo</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$5,29</h6>
             </div>
-        {% endblock %}
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Sebastião</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Quiabo</a></div>
+            <div class="col-6 text-start">
+              <h6 class="pt-1">R$5,29</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Sebastião</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Quiabo</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$5,29</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Sebastião</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Quiabo</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$5,29</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Sebastião</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Quiabo</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$5,29</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Sebastião</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 50%;" src="/static/img/produtos/0001.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Quiabo</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$5,29</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Sebastião</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row h300 bg-secondary bg-opacity-25 my-5">
+    <div class="col-12 h50 pt-3 ps-5">
+      <h3>Mais Serviços</h3>
+    </div>
+    <div class="col-6 h250 pt-4 text-end">
+      <a href="#"><i style="font-size: 70px; color: black" class="bi bi-headset p-5 me-2"></i></a>
+      <h5 class="me-5">Mais Serviços</h5>
+    </div>
+    <div class="col-6 h250 pt-4">
+      <a href="#"><i style="font-size: 70px; color: black" class="bi bi-file-earmark-text p-5 ms-4"></i></a>
+      <h5 class="ms-4">Sugestões e Reclamações</h5>
+    </div>
+  </div>
+</div>
+{% endblock %}

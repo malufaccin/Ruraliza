@@ -2,35 +2,48 @@
 
 {% block subtitulo %}Página Principal{% endblock %}
 
-{% block conteudo %} 
-   
-        <div class="row">
-            <div class="col-12 col-md-3 mt-4">
-                <a style="text-decoration: none;" href="/perfil_administrador" class="fs-3 ms-4 text-dark"> < Voltar</a>
+{% block conteudo %}
+
+<div class="row">
+    <div class="col-12 col-md-3 mt-4">
+        <a style="text-decoration: none;" href="/perfil_administrador" class="fs-3 ms-4 text-dark">
+            < Voltar</a>
                 <div class="list-group ms-3 mt-3">
-                    <a href="/gerenciar_categorias" class="list-group-item list-group-item-action fs-6">Gerenciar Categorias</a>
-                    <a href="/gerenciar_contas" class="list-group-item list-group-item-action fs-6 active">Gerenciar Contas</a>
-                    <a href="/gerenciar_anuncios" class="list-group-item list-group-item-action fs-6">Gerenciar Anúncios</a>
+                    <a href="/gerenciar_categorias" class="list-group-item list-group-item-action fs-6">Gerenciar
+                        Categorias</a>
+                    <a href="/gerenciar_contas" class="list-group-item list-group-item-action fs-6 active">Gerenciar
+                        Contas</a>
+                    <a href="/gerenciar_anuncios" class="list-group-item list-group-item-action fs-6">Gerenciar
+                        Anúncios</a>
                     <a href="#" class="list-group-item list-group-item-action  fs-6">Chamados</a>
                 </div>
-            </div>
-            <div class="col-12 col-md-7 h600 mt-5 p-5">
-                <div>
-                    <input class="form-control bg-success bg-opacity-50" type="text" placeholder="Nome da conta">
-                </div>
-                <div class="my-3">
-                    <div class="list-group">
-                        <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Fazenda Feliz</a>
-                        <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Fazenda Sorocaba</a>
-                        <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Leal Produções</a>
-                        <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Fazenda do Leste</a>
-                        <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Correrio</a>
-                        <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Casa Martell</a>
-                        <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Caligario</a>
-                        <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Realize Produções</a>
-                        <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Granfreitas</a>
-                      </div>
-                </div>
+    </div>
+    <div class="col-12 col-md-7 h600 mt-5 p-5">
+        <div>
+            <input class="form-control bg-success bg-opacity-50" type="text" placeholder="Nome da conta">
+        </div>
+        <div class="my-3">
+            <div class="list-group">
+                <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Fazenda
+                    Feliz</a>
+                <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Fazenda
+                    Sorocaba</a>
+                <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Leal
+                    Produções</a>
+                <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Fazenda do
+                    Leste</a>
+                <a href="/editar_conta"
+                    class="list-group-item list-group-item-action list-group-item-light">Correrio</a>
+                <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Casa
+                    Martell</a>
+                <a href="/editar_conta"
+                    class="list-group-item list-group-item-action list-group-item-light">Caligario</a>
+                <a href="/editar_conta" class="list-group-item list-group-item-action list-group-item-light">Realize
+                    Produções</a>
+                <a href="/editar_conta"
+                    class="list-group-item list-group-item-action list-group-item-light">Granfreitas</a>
             </div>
         </div>
-        {% endblock %}
+    </div>
+</div>
+{% endblock %}

@@ -2,228 +2,317 @@
 
 {% block subtitulo %}Página Principal{% endblock %}
 
-{% block conteudo %}    
-        
-   
-        <div class="col-11 mx-auto">
-            <div class="my-3">
-                <a class="me-3" href="#"><img src="/static/img/banners/banner1.png" alt="banner1" style="width: 55%;"></a>
-                <a href="#"><img src="/static/img/banners/banner2.png" alt="banner2" style="width: 37%;"></a>
+{% block conteudo %}
+
+
+<div class="col-11 mx-auto">
+  <div class="my-3">
+    <a class="me-3" href="#"><img src="/static/img/banners/banner1.png" alt="banner1" style="width: 55%;"></a>
+    <a href="#"><img src="/static/img/banners/banner2.png" alt="banner2" style="width: 37%;"></a>
+  </div>
+  <div class="my-5 ms-5">
+    <h3>CATEGORIAS</h3>
+    <div class="col-12">
+      <div class="col-3 btn-group-vertical mx-5 my-3" aria-label="Basic example">
+        <a href="/categoria_frutas" type="button" class="btn"><img src="/static/img/icones/frutas.png"
+            style="width: 70%;"></a>
+        <a href="/categoria_verduras" type="button" class="btn"><img src="/static/img/icones/vegetais.png"
+            style="width: 70%;"></a>
+      </div>
+      <div class="col-3 btn-group-vertical mx-5 my-3" aria-label="Basic example">
+        <a href="/categoria_temperos" type="button" class="btn"><img src="/static/img/icones/temperos.png"
+            style="width: 50%;"></a>
+        <a href="/templates/main/pages/categoria_graos.html" type="button" class="btn"><img
+            src="/static/img/icones/graos.png" style="width: 50%;"></a>
+      </div>
+      <div class="col-3 btn-group-vertical mx-5 my-3" aria-label="Basic example">
+        <a href="/templates/main/pages/categoria_compotas.html" type="button" class="btn"><img
+            src="/static/img/icones/compotas.png" style="width: 50%;"></a>
+        <a href="/templates/main/pages/categoria_laticineos.html" type="button" class="btn"><img
+            src="/static/img/icones/laticinios.png" style="width: 50%;"></a>
+      </div>
+    </div>
+    <div>
+      <h3 class="ms-5 my-5 pt-5">TEMPEROS</h3>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-6 g-3 mx-5 my-3">
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0000.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Maçã</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$13,90/Kg</h6>
             </div>
-            <div class="my-5 ms-5">
-                <h3>CATEGORIAS</h3>
-                <div class="col-12">
-                  <div class="col-3 btn-group-vertical mx-5 my-3" aria-label="Basic example">
-                    <a href="/categoria_frutas" type="button" class="btn"><img src="/static/img/icones/frutas.png" style="width: 70%;"></a>
-                    <a href="/categoria_verduras" type="button" class="btn"><img src="/static/img/icones/vegetais.png" style="width: 70%;"></a>
-                  </div>
-                  <div class="col-3 btn-group-vertical mx-5 my-3" aria-label="Basic example">
-                    <a href="/categoria_temperos" type="button" class="btn"><img src="/static/img/icones/temperos.png" style="width: 50%;"></a>
-                    <a href="/templates/main/pages/categoria_graos.html" type="button" class="btn"><img src="/static/img/icones/graos.png" style="width: 50%;"></a>
-                  </div>
-                  <div class="col-3 btn-group-vertical mx-5 my-3" aria-label="Basic example">
-                    <a href="/templates/main/pages/categoria_compotas.html" type="button" class="btn"><img src="/static/img/icones/compotas.png" style="width: 50%;"></a>
-                    <a href="/templates/main/pages/categoria_laticineos.html" type="button" class="btn"><img src="/static/img/icones/laticinios.png" style="width: 50%;"></a>
-                  </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Sebastião</h6>
             </div>
-            <div>
-                <h3 class="ms-5 my-5 pt-5">TEMPEROS</h3>
-            </div>
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-6 g-3 mx-5 my-3">
-              <div class="col">
-                <div class="card">
-                  <img style="width: 100%;" src="/static/img/produtos/temperos/0000.jpg" class="card-img-top" alt="...">
-                  <div class="card-body row">
-                    <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Maçã</a></div>
-                    <div class="col-6 text-end"><h6 class="pt-1">R$13,90/Kg</h6></div>
-                    <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Sebastião</h6></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                  <div class="card">
-                    <img style="width: 100%;" src="/static/img/produtos/temperos/0001.jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Maçã-Verde</a></div>
-                      <div class="col-6 text-end"><h6 class="pt-1">R$19,80/Kg</h6></div>
-                      <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Augusto</h6></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img style="width: 100%;" src="/static/img/produtos/temperos/0002.jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Abacate</a></div>
-                      <div class="col-6 text-end"><h6 class="pt-1">R$13,50/Kg</h6></div>
-                      <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Rosimere</h6></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img style="width: 100%;" src="/static/img/produtos/temperos/0003.jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Laranja</a></div>
-                      <div class="col-6 text-end"><h6 class="pt-1">R$7,25/Kg</h6></div>
-                      <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Frederico</h6></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img style="width: 100%;" src="/static/img/produtos/temperos/0004.jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Melancia</a></div>
-                      <div class="col-6 text-end"><h6 class="pt-1">R$8,97/Un</h6></div>
-                      <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Dona Maria</h6></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img style="width: 100%;" src="/static/img/produtos/temperos/0005.jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Manga</a></div>
-                      <div class="col-6 text-end"><h6 class="pt-1">R11,20/Kg</h6></div>
-                      <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Fazenda Leste</h6></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-6 g-3 mx-5 my-3">
-                  <div class="col">
-                    <div class="card">
-                      <img style="width: 100%;" src="/static/img/produtos/temperos/0006.jpg" class="card-img-top" alt="...">
-                      <div class="card-body row">
-                        <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Kiwi</a></div>
-                        <div class="col-6 text-end"><h6 class="pt-1">R$26,00/Kg</h6></div>
-                        <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Casa do Campo</h6></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                      <div class="card">
-                        <img style="width: 100%;" src="/static/img/produtos/temperos/0007.jpg" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                          <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Laranja Lima</a></div>
-                          <div class="col-6 text-end"><h6 class="pt-1">R$9,80/Kg</h6></div>
-                          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Casa do Tempero</h6></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                        <img style="width: 100%;" src="/static/img/produtos/temperos/0008.jpg" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                          <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Mamão</a></div>
-                          <div class="col-6 text-end"><h6 class="pt-1">R$16,90/Kg</h6></div>
-                          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Olavo</h6></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                        <img style="width: 100%;" src="/static/img/produtos/temperos/0009.jpg" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                          <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Limão Siciliano</a></div>
-                          <div class="col-6 text-end"><h6 class="pt-1">R$10,99/Kg</h6></div>
-                          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Produções M.</h6></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                        <img style="width: 100%;" src="/static/img/produtos/temperos/0010.jpg" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                          <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Uva Verde s/Caroço</a></div>
-                          <div class="col-6 text-end"><h6 class="pt-1">R$27,00/Kg</h6></div>
-                          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Produções M.</h6></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                        <img style="width: 100%;" src="/static/img/produtos/temperos/0011.jpg" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                          <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Uva Roxa</a></div>
-                          <div class="col-6 text-end"><h6 class="pt-1">R$8,98/Kg</h6></div>
-                          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Medicina Alternativa</h6></div>
-                        </div>
-                      </div>
-                    </div>
-              </div>
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-6 g-3 mx-5 my-3">
-                  <div class="col">
-                    <div class="card">
-                      <img style="width: 100%;" src="/static/img/produtos/temperos/0012.jpg" class="card-img-top" alt="...">
-                      <div class="card-body row">
-                        <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Lichia</a></div>
-                        <div class="col-6 text-end"><h6 class="pt-1">R$9,90/Kg</h6></div>
-                        <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Pomar Pessoal</h6></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                      <div class="card">
-                        <img style="width: 100%;" src="/static/img/produtos/temperos/0013.jpg" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                          <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Carambola</a></div>
-                          <div class="col-6 text-end"><h6 class="pt-1">R$24,59</h6></div>
-                          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">temperos em Casa</h6></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                        <img style="width: 100%;" src="/static/img/produtos/temperos/0014.jpg" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                          <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Goiaba</a></div>
-                          <div class="col-6 text-end"><h6 class="pt-1">R$8,69/Kg</h6></div>
-                          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Cheiro Verde</h6></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                        <img style="width: 100%;" src="/static/img/produtos/temperos/0015.jpg" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                          <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Pêssego</a></div>
-                          <div class="col-6 text-end"><h6 class="pt-1">R$18,99/Kg</h6></div>
-                          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Fritas em Casa</h6></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                        <img style="width: 100%;" src="/static/img/produtos/temperos/0016.jpg" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                          <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Romã</a></div>
-                          <div class="col-6 text-end"><h6 class="pt-1">R$49,25/Kg</h6></div>
-                          <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Sebastião</h6></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                          <img style="width: 100%;" src="/static/img/produtos/temperos/0017.jpg" class="card-img-top" alt="...">
-                          <div class="card-body row">
-                            <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Cereja</a></div>
-                            <div class="col-6 text-end"><h6 class="pt-1">R$79,00/Kg</h6></div>
-                            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i><h6 class="pt-1">Sebastião</h6></div>
-                          </div>
-                        </div>
-                      </div>
-              </div>
-          <div class="col-1 mx-auto my-5">
-              <a href="/cupons" style="font-size: 100%;" class="btn btn-outline-dark">VER MAIS</a>
           </div>
         </div>
-        {% endblock %}
-
-
-
-
-
-
-
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0001.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Maçã-Verde</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$19,80/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Augusto</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0002.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Abacate</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$13,50/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Rosimere</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0003.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Laranja</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$7,25/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Frederico</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0004.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Melancia</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$8,97/Un</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Dona Maria</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0005.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Manga</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R11,20/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Fazenda Leste</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-6 g-3 mx-5 my-3">
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0006.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Kiwi</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$26,00/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Casa do Campo</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0007.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Laranja Lima</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$9,80/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Casa do Tempero</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0008.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Mamão</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$16,90/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Olavo</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0009.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Limão Siciliano</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$10,99/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Produções M.</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0010.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Uva
+                Verde s/Caroço</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$27,00/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Produções M.</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0011.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#" class="fs-6 text-dark fw-bold">Uva
+                Roxa</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$8,98/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Medicina Alternativa</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-6 g-3 mx-5 my-3">
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0012.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Lichia</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$9,90/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Pomar Pessoal</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0013.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Carambola</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$24,59</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">temperos em Casa</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0014.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Goiaba</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$8,69/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Cheiro Verde</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0015.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Pêssego</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$18,99/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Fritas em Casa</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0016.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Romã</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$49,25/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Sebastião</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img style="width: 100%;" src="/static/img/produtos/temperos/0017.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <div class="col-6 text-start"><a style="text-decoration: none;" href="#"
+                class="fs-6 text-dark fw-bold">Cereja</a></div>
+            <div class="col-6 text-end">
+              <h6 class="pt-1">R$79,00/Kg</h6>
+            </div>
+            <div class="col-12 d-flex"><i class="pe-2 bi bi-shop-window"></i>
+              <h6 class="pt-1">Sebastião</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-1 mx-auto my-5">
+      <a href="/cupons" style="font-size: 100%;" class="btn btn-outline-dark">VER MAIS</a>
+    </div>
+  </div>
+  {% endblock %}

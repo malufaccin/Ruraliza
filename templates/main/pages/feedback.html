@@ -2,38 +2,40 @@
 
 {% block subtitulo %}Página Principal{% endblock %}
 
-{% block conteudo %} 
+{% block conteudo %}
 
-   
-        <div class="row">
-            <div class="col-md-3 mt-0">
-                <h1 class="ms-4 mt-3">Olá Usuário!</h1>
-                <div class="list-group ms-3 mt-3">
-                    <a href="/meus_dados" class="list-group-item list-group-item-action fs-6">Meus Dados</a>
-                    <a href="/enderecos" class="list-group-item list-group-item-action fs-6">Endereços</a>
-                    <a href="/assinar" class="list-group-item list-group-item-action fs-6">Assinatura</a>
-                    <a href="/termos" class="list-group-item list-group-item-action  fs-6">Termos e Condições</a>
-                    <a href="/feedback" class="list-group-item list-group-item-action active fs-6">Avaliação e Feedback</a>
-                    <a href="/contatos" class="list-group-item list-group-item-action fs-6">Conecte-se a Nós</a>
-                    <a href="/sobrenos" class="list-group-item list-group-item-action fs-6">Sobre RURALIZA</a>
-                    <a href="/mudar_conta" class="list-group-item list-group-item-action fs-6">Trocar Contas</a>
-                    <a href="/pedidos" class="list-group-item list-group-item-action fs-6">Pedidos</a>
-                </div>
-            </div>
-            <div class="col-md-8 h800 mt-5 p-4">
-                <div class="col-3 mx-auto mt-1">
-                    <img class="ms-3" style="width: 80%;" src="/static/img/logos/LOGO REDUZIDA VETOR.png" alt="logo">
-                </div>
-                <div class="col-3 mx-auto text-center mt-4">
-                    <p class="fs-2 ps-2 fw-semibold">Avaliação e Feedback</p>
-                </div>
-                <div class="col-6 mx-auto text-center mt-5">
-                    <p class="fs-4 ps-4 fw-semibold">Sua avaliação nos ajuda a melhorar a sua experiência!</p>
-                </div>
-                <div class="row col-8 mx-auto">
-                    <a href="#" class="btn btn-outline-success text-dark mb-4 py-3 fs-4"><i class="bi bi-star-fill me-2"></i>Classificação</a>
-                    <a href="#" class="btn btn-outline-success text-dark py-3 fs-4"><i class="bi bi-chat-square-text me-2"></i>Comentários</a>
-                </div>
-            </div>
+
+<div class="row">
+    <div class="col-md-3 mt-0">
+        <h1 class="ms-4 mt-3">Olá Usuário!</h1>
+        <div class="list-group ms-3 mt-3">
+            <a href="/meus_dados" class="list-group-item list-group-item-action fs-6">Meus Dados</a>
+            <a href="/enderecos" class="list-group-item list-group-item-action fs-6">Endereços</a>
+            <a href="/assinar" class="list-group-item list-group-item-action fs-6">Assinatura</a>
+            <a href="/termos" class="list-group-item list-group-item-action  fs-6">Termos e Condições</a>
+            <a href="/feedback" class="list-group-item list-group-item-action active fs-6">Avaliação e Feedback</a>
+            <a href="/contatos" class="list-group-item list-group-item-action fs-6">Conecte-se a Nós</a>
+            <a href="/sobrenos" class="list-group-item list-group-item-action fs-6">Sobre RURALIZA</a>
+            <a href="/mudar_conta" class="list-group-item list-group-item-action fs-6">Trocar Contas</a>
+            <a href="/pedidos" class="list-group-item list-group-item-action fs-6">Pedidos</a>
         </div>
-        {% endblock %}
+    </div>
+    <div class="col-md-8 h800 mt-5 p-4">
+        <div class="col-3 mx-auto mt-1">
+            <img class="ms-3" style="width: 80%;" src="/static/img/logos/LOGO REDUZIDA VETOR.png" alt="logo">
+        </div>
+        <div class="col-3 mx-auto text-center mt-4">
+            <p class="fs-2 ps-2 fw-semibold">Avaliação e Feedback</p>
+        </div>
+        <div class="col-6 mx-auto text-center mt-5">
+            <p class="fs-4 ps-4 fw-semibold">Sua avaliação nos ajuda a melhorar a sua experiência!</p>
+        </div>
+        <div class="row col-8 mx-auto">
+            <a href="#" class="btn btn-outline-success text-dark mb-4 py-3 fs-4"><i
+                    class="bi bi-star-fill me-2"></i>Classificação</a>
+            <a href="#" class="btn btn-outline-success text-dark py-3 fs-4"><i
+                    class="bi bi-chat-square-text me-2"></i>Comentários</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -2,37 +2,41 @@
 
 {% block subtitulo %}Página Principal{% endblock %}
 
-{% block conteudo %} 
-        
-   
-        <div class="row">
-            <div class="col-12 col-md-3 mt-4">
-                <a style="text-decoration: none;" href="/perfil_administrador" class="fs-3 ms-4 text-dark"> < Voltar</a>
+{% block conteudo %}
+
+
+<div class="row">
+    <div class="col-12 col-md-3 mt-4">
+        <a style="text-decoration: none;" href="/perfil_administrador" class="fs-3 ms-4 text-dark">
+            < Voltar</a>
                 <div class="list-group ms-3 mt-3">
-                    <a href="/gerenciar_categorias" class="list-group-item list-group-item-action fs-6">Gerenciar Categorias</a>
+                    <a href="/gerenciar_categorias" class="list-group-item list-group-item-action fs-6">Gerenciar
+                        Categorias</a>
                     <a href="/gerenciar_contas" class="list-group-item list-group-item-action fs-6">Gerenciar Contas</a>
-                    <a href="/gerenciar_anuncios" class="list-group-item list-group-item-action fs-6 active">Gerenciar Anúncios</a>
+                    <a href="/gerenciar_anuncios" class="list-group-item list-group-item-action fs-6 active">Gerenciar
+                        Anúncios</a>
                     <a href="#" class="list-group-item list-group-item-action fs-6">Chamados</a>
                 </div>
+    </div>
+    <div class="col-12 col-md-7 h600 mt-5 p-5">
+        <div>
+            <input class="form-control form-control-lg bg-success bg-opacity-50" type="text"
+                placeholder="Insira o link do anúncio">
+        </div>
+        <div class="row my-3">
+            <div class="col-12 col-xl-6">
+                <img width="100%" src="/static/img/produtos/0016.jpg">
             </div>
-            <div class="col-12 col-md-7 h600 mt-5 p-5">
-                <div>
-                    <input class="form-control form-control-lg bg-success bg-opacity-50" type="text" placeholder="Insira o link do anúncio">
+            <div class="col-12 col-xl-6">
+                <h3>Laranja Pera Orgânicas Frescas</h3>
+                <p class="fs-5">de Fazenda Santa Clara </p>
+                <div class="mt-5">
+                    <button class="btn btn-danger mx-2 mt-3"><i class="bi bi-trash"></i></button>
+                    <button class="btn btn-warning mx-2 mt-3"><i class="bi bi-ban"></i></button>
                 </div>
-                <div class="row my-3">
-                    <div class="col-12 col-xl-6">
-                        <img width="100%" src="/static/img/produtos/0016.jpg">
-                    </div>
-                    <div class="col-12 col-xl-6">
-                        <h3>Laranja Pera Orgânicas Frescas</h3>
-                        <p class="fs-5">de Fazenda Santa Clara </p>
-                        <div class="mt-5">
-                            <button class="btn btn-danger mx-2 mt-3"><i class="bi bi-trash"></i></button>
-                            <button class="btn btn-warning mx-2 mt-3"><i class="bi bi-ban"></i></button>
-                        </div>
-                        
-                    </div>
-                </div>
+
             </div>
         </div>
-        {% endblock %}
+    </div>
+</div>
+{% endblock %}

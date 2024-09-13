@@ -2,43 +2,44 @@
 
 {% block subtitulo %}Página Principal{% endblock %}
 
-{% block conteudo %} 
-   
-        <div>
-            <div class="h1150 mt-4 p-4 ms-3">
-                <div class="mb-5">
-                  <h4><a href="/rastreio"><i class="bi bi-arrow-left-circle-fill me-4" style="font-size: 40px;"></i></a>Rastreamento</h4>
-                </div>
-                <div class="mb-4">
-                    <i class="bi bi-truck" style="font-size: 40px;"></i><span class="text-success ms-3 fs-3">Enviado</span>
-                </div>
-                <div class="col-8 progress mx-auto my-5" style="height: 45px;">
-                    <div class="progress-bar w-25" style="background-color: purple">
-                    </div>
-                    <div class="progress-bar w-25" style="background-color: purple">
-                    </div>
-                    <div class="progress-bar w-25" style="background-color: purple">
-                    </div>
-                    <div class="progress-bar w-25" style="background-color: purple">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-11 col-md-8 col-lg-6 col-xl-5 col-xxl-4 ms-auto my-5 py-5">
-                    <a class="btn btn-outline-dark me-3 mb-2 mt-5" href="#">CONTATAR VENDEDOR</a>
-                    <a class="btn btn-outline-success mb-2 mt-5" href="/avaliar">AVALIAR PEDIDO</a>
-                </div>
-                <div class="mb-3">
-                    <p class="fs-4">Entrega para Josué Oliveira</p>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <p>Rua: Nildo Ataíde Pinheiro
-                        <br>nº 46
-                        <br>Bairro: São Luiz Gonzaga
-                        <br>Cidade: Cachoeiro de Itapemirim
-                        <br>CEP: 29306-832
-                        <br>Ponto de Referência: Próximo à escola Juracy Cruz
-                        <p>
-                </div>
+{% block conteudo %}
+
+<div>
+    <div class="h1150 mt-4 p-4 ms-3">
+        <div class="mb-5">
+            <h4><a href="/rastreio"><i class="bi bi-arrow-left-circle-fill me-4"
+                        style="font-size: 40px;"></i></a>Rastreamento</h4>
+        </div>
+        <div class="mb-4">
+            <i class="bi bi-truck" style="font-size: 40px;"></i><span class="text-success ms-3 fs-3">Enviado</span>
+        </div>
+        <div class="col-8 progress mx-auto my-5" style="height: 45px;">
+            <div class="progress-bar w-25" style="background-color: purple">
+            </div>
+            <div class="progress-bar w-25" style="background-color: purple">
+            </div>
+            <div class="progress-bar w-25" style="background-color: purple">
+            </div>
+            <div class="progress-bar w-25" style="background-color: purple">
             </div>
         </div>
-        {% endblock %}
+        <div class="col-12 col-sm-11 col-md-8 col-lg-6 col-xl-5 col-xxl-4 ms-auto my-5 py-5">
+            <a class="btn btn-outline-dark me-3 mb-2 mt-5" href="#">CONTATAR VENDEDOR</a>
+            <a class="btn btn-outline-success mb-2 mt-5" href="/avaliar">AVALIAR PEDIDO</a>
+        </div>
+        <div class="mb-3">
+            <p class="fs-4">Entrega para Josué Oliveira</p>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <p>Rua: Nildo Ataíde Pinheiro
+                    <br>nº 46
+                    <br>Bairro: São Luiz Gonzaga
+                    <br>Cidade: Cachoeiro de Itapemirim
+                    <br>CEP: 29306-832
+                    <br>Ponto de Referência: Próximo à escola Juracy Cruz
+                <p>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
