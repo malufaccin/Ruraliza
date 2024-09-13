@@ -23,9 +23,25 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/login.html", {"request": request})
 
-@router.get("/frutas", response_class=HTMLResponse)
+@router.get("/categoria_frutas", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/categoria_frutas.html", {"request": request})
+
+@router.get("/categoria_vegetais", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/categoria_vegetais.html", {"request": request})
+
+@router.get("/categoria_temperos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/categoria_temperos.html", {"request": request})
+
+@router.get("/categoria_graos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/categoria_graos.html", {"request": request})
+
+@router.get("/categoria_laticineos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/categoria_laticineos.html", {"request": request})
 
 @router.get("/cesta", response_class=HTMLResponse)
 async def get_root(request: Request):
@@ -62,6 +78,14 @@ async def get_root(request: Request):
 @router.get("/categoria_frutas", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/categoria_frutas.html", {"request": request})
+
+@router.get("/categoria_vegetais", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/categoria_vegetais.html", {"request": request})
+
+@router.get("/categoria_temperos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/categoria_temperos.html", {"request": request})
 
 @router.get("/contatos", response_class=HTMLResponse)
 async def get_root(request: Request):
