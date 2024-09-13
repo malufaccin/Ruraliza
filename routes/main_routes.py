@@ -47,7 +47,7 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/avaliar.html", {"request": request})
 
-@router.get("/avaliar2", response_class=HTMLResponse)
+@router.get("/avaliar_2", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/avaliar_2.html", {"request": request})
 
@@ -130,6 +130,10 @@ async def get_root(request: Request):
 @router.get("/gerenciar_contas", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/gerenciar_contas.html", {"request": request})
+
+@router.get("/gerenciar_categorias", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/gerenciar_categorias.html", {"request": request})
 
 @router.get("/meus_dados", response_class=HTMLResponse)
 async def get_root(request: Request):
