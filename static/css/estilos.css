@@ -71,3 +71,14 @@ body {
 .sidebar ul li a:hover {
     color: #522E80;
 }
+
+.h1150{
+    height: 1150px;
+}
+
+.h1400{
+    height: 1400px;
+}
+.w18{
+    width: 18rem;
+}
