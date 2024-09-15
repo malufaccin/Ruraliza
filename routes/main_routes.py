@@ -15,6 +15,10 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/index_entregador.html", {"request": request})
 
+@router.get("/administrador", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/index_adm.html", {"request": request})
+
 @router.get("/produtor", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/index_produtor.html", {"request": request})
