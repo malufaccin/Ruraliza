@@ -11,6 +11,10 @@ templates = obter_jinja_templates("templates")
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/index.html", {"request": request})
 
+@router.get("/entregador", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/index_entregador.html", {"request": request})
+
 @router.get("/configuracoes", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/configuracoes.html", {"request": request})
