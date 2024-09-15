@@ -266,3 +266,7 @@ async def get_root(request: Request):
 @router.get("/visualizar_entrega", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/visualizar_entrega.html", {"request": request})
+
+@router.get("/exclusao", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/exc_not.html", {"request": request})
