@@ -47,3 +47,6 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/lista_mensagens.html", {"request": request})
 
+@router.get("/mudar_conta", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/mudar_conta.html", {"request": request})
