@@ -50,10 +50,6 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/avaliar_2.html", {"request": request})
 
-@router.get("/contatos", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/contatos.html", {"request": request})
-
 @router.get("/cupons", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/cupons.html", {"request": request})

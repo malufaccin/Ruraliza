@@ -118,3 +118,7 @@ async def get_root(request: Request):
 @router.get("/termos", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/termos.html", {"request": request})
+
+@router.get("/contatos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/contatos.html", {"request": request})
