@@ -11,6 +11,52 @@ templates = obter_jinja_templates("templates")
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/index.html", {"request": request})
 
+
+@router.post("/post_entrar")
+async def post_entrar(
+    email: str = Form(...), 
+    senha: str = Form(...)):
+    usuario = UsuarioRepo.checar_credenciais(email, senha)
+    if usuario is None:
+        response = RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
+        return response
+    token = criar_token(usuario[0], usuario[1], usuario[2])
+    nome_perfil = None
+    match (usuario[2]):
+        case 1: nome_perfil = "produtor"
+        case 2: nome_perfil = "cliente"
+        case 3: nome_perfil = "entregador"
+        case 4: nome_perfil = "administrador"
+        case _: nome_perfil = ""
+    
+    response = RedirectResponse(f"/{nome_perfil}", status_code=status.HTTP_303_SEE_OTHER)    
+    response.set_cookie(
+        key=NOME_COOKIE_AUTH,
+        value=token,
+        max_age=3600*24*365*10,
+        httponly=True,
+        samesite="lax"
+    )
+    return response
+
+
+@router.post("/post_cadastrar")
+async def post_cadastrar(
+    nome: str = Form(...),
+    email: str = Form(...),
+    telefone: str = Form(...),
+    senha: str = Form(...),
+    confsenha: str = Form(...),
+    perfil: int = Form(...)):
+    if senha != confsenha:
+        return RedirectResponse("/cadastrar", status_code=status.HTTP_303_SEE_OTHER)
+    senha_hash = obter_hash_senha(senha)
+    usuario = Usuario(None, nome, email, telefone, senha_hash, None, perfil)
+    UsuarioRepo.inserir(usuario)
+    return RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
+
+
+
 @router.get("/configuracoes", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/configuracoes.html", {"request": request})
