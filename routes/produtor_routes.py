@@ -39,10 +39,6 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("/main/pages/adicionar_endereco.html", {"request": request})
 
-@router.get("/contatos", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/contatos.html", {"request": request})
-
 @router.get("/feedback", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/feedback.html", {"request": request})
