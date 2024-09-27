@@ -30,8 +30,7 @@ async def post_entrar(
         case 2: nome_perfil = "cliente"
         case 3: nome_perfil = "entregador"
         case 4: nome_perfil = "administrador"
-        case _: nome_perfil = ""
-    
+        case _: nome_perfil = ""    
     response = RedirectResponse(f"/{nome_perfil}", status_code=status.HTTP_303_SEE_OTHER)    
     response.set_cookie(
         key=NOME_COOKIE_AUTH,
@@ -57,8 +56,6 @@ async def post_cadastrar(
     usuario = Usuario(None, nome, email, telefone, senha_hash, None, perfil)
     UsuarioRepo.inserir(usuario)
     return RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
-
-
 
 @router.get("/configuracoes", response_class=HTMLResponse)
 async def get_root(request: Request):
