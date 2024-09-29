@@ -7,43 +7,91 @@
     <div class="col-12 col-xl-7 h572 corroxa align-content-center mx-auto"><img style="margin-left: 38%; width: 25%"
         src="/static/img/logos/LOGO REDUZIDA VETOR.png" alt="logo"></div>
     <div class="col-12 col-xl-4 h572">
-      <form>
-        <div class="col-8 mt-5 mb-4 mx-auto px-auto">
-          <h1 class="display-5 text-center fw-semibold" style="color: #47525E; font-size: 40px;">Criar Conta</h1>
-        </div>
-        <div class="col-12 mb-3 mt-0 mx-auto">
-          <label for="nomecompleto" class="form-label">Nome Completo:</label>
-          <input type="txt" name="nomecompleto" id="nomecompleto" placeholder="Nome Completo"
-            class="form-control">
-        </div>
-        <div class="col-12 mb-3 mx-auto">
-          <label for="email" class="form-label">Email:</label>
-          <input type="txt" name="email" id="email" placeholder="Email" class="form-control">
-        </div>
-        <div class="col-12 mb-3 mx-auto">
-          <label for="cpf" class="form-label">CPF:</label>
-          <input type="txt" name="cpf" id="cpf" placeholder="CPF" class="form-control">
-        </div>
-        <div class="col-6 mx-auto form-text text-center">
-          Ao Criar Conta, você concorda com nossos Termos & Condições
-        </div>
-        <div class="row col-12 ms-auto me-4 mt-3">
-          <div class="col-3">
-            <a href="/selecionar_tipo_perfil" class="btn btn-success btn-lg text-dark" style="font-size: 30px;"><i
-                class="bi bi-caret-left-fill"></i></a>
+      <div class="col-8 mt-5 mb-4 mx-auto px-auto">
+        <h1 class="display-5 text-center fw-semibold" style="color: #47525E; font-size: 40px;">Criar Conta</h1>
+      </div>
+      <form action="/post_cadastrar_cliente">
+        <div id="step1" class="step">
+          <div class="col-12 mb-3 mt-0 mx-auto">
+            <label for="nomecompleto" class="form-label">Nome Completo:</label>
+            <input type="text" name="nomecompleto" id="nomecompleto" placeholder="Nome Completo" class="form-control">
           </div>
-          <div class="col-6 text-center align-content-center">
-            <h4>1/2</h4>
+          <div class="col-12 mb-3 mx-auto">
+            <label for="email" class="form-label">Email:</label>
+            <input type="text" name="email" id="email" placeholder="Email" class="form-control">
           </div>
-          <div class="col-3">
-            <a href="/criar_conta_cliente2" class="btn btn-success btn-lg text-dark" style="font-size: 30px;"><i
-                class="bi bi-caret-right-fill"></i></a>
+          <div class="col-12 mb-3 mx-auto">
+            <label for="cpf" class="form-label">CPF:</label>
+            <input type="text" name="cpf" id="cpf" placeholder="CPF" class="form-control">
+          </div>
+        </div>
+        <div id="step2" class="step d-none">
+          <div class="col-12 mb-3 mt-0 mx-auto">
+            <label for="datanascimento" class="form-label">Data de Nascimento:</label>
+            <input type="date" name="datanascimento" id="datanascimento" class="form-control">
+          </div>
+          <div class="col-12 mb-3 mx-auto">
+            <label for="senha" class="form-label">Senha:</label>
+            <input type="password" name="senha" id="senha" placeholder="Senha" class="form-control">
+            <div class="form-text">*Senha deve conter pelo menos 8 caracteres</div>
+          </div>
+          <div class="col-12 mt-4 mb-3 mx-auto">
+            <label for="confirmacaosenha" class="form-label">Confirme a Senha:</label>
+            <input type="password" name="confirmacaosenha" id="confirmacaosenha" placeholder="Confirme a Senha:"
+              class="form-control">
+          </div>
+          <div class="col-12 mb-3 mx-auto"></div>
+            <button class="btn btn-success" type="submit">Cadastrar</button>
           </div>
         </div>
       </form>
-    </div>
+        <div class="row col-12 ms-auto me-4 mt-3">
+          <div class="col-3">
+            <button id="prevBtn" class="btn btn-success btn-lg text-dark" style="font-size: 30px;" type="button"><i
+                class="bi bi-caret-left-fill"></i></button>
+          </div>
+          <div class="col-6 text-center align-content-center">
+            <h4 id="stepProgress">1/2</h4>
+          </div>
+          <div class="col-3">
+            <button id="nextBtn" class="btn btn-success btn-lg text-dark" style="font-size: 30px;" type="button"><i class="bi bi-caret-right-fill"></i></button>
+          </div>
+          <div class="col-6 mx-auto text-center">
+            Ao Criar Conta, você concorda com nossos Termos & Condições
+          </div>
+        </div>
+      </div>
     <div class="col-12 col-xl-1 corroxa h572"></div>
     <div class="col-12 h49 corroxa"></div>
     </div>
-    </div>
+<script>
+      let currentStep = 0;
+      const steps = document.querySelectorAll('.step');
+      const stepProgress = document.getElementById('stepProgress');
+    
+      function updateStep() {    
+        steps.forEach((step, index) => {
+          step.classList.add('d-none');
+          if (index === currentStep) {
+            step.classList.remove('d-none');
+          }
+        });
+        stepProgress.textContent = `${currentStep + 1}/${steps.length}`;
+      }
+    
+      document.getElementById('nextBtn').addEventListener('click', () => {
+        if (currentStep < steps.length - 1) {
+          currentStep++;
+          updateStep();
+        }
+      });
+    
+      document.getElementById('prevBtn').addEventListener('click', () => {
+        if (currentStep > 0) {
+          currentStep--;
+          updateStep();
+        }
+      });
+      updateStep();
+</script>
 {% endblock %}
