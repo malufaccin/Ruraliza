@@ -42,8 +42,8 @@ async def post_entrar(
     return response
 
 
-@router.post("/post_cadastrar")
-async def post_cadastrar(
+@router.post("/post_cadastrar_produtor")
+async def post_cadastrar_produtor(
     nome: str = Form(...),
     email: str = Form(...),
     telefone: str = Form(...),
@@ -53,7 +53,13 @@ async def post_cadastrar(
     if senha != confsenha:
         return RedirectResponse("/cadastrar", status_code=status.HTTP_303_SEE_OTHER)
     senha_hash = obter_hash_senha(senha)
-    usuario = Usuario(None, nome, email, telefone, senha_hash, None, perfil)
+    usuario = Usuario(
+        nome=nome,
+        email=email,
+        telefone=telefone,
+        senha=senha_hash, 
+        perfil=perfil)
+
     UsuarioRepo.inserir(usuario)
     return RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
 
