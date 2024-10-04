@@ -12,7 +12,9 @@ templates = obter_jinja_templates("templates")
 
 @router.get("/", response_class=HTMLResponse)
 async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/index.html", {"request": request})
+    usuario = request.state.usuario if hasattr(request.state, "usuario") else None
+    if not usuario or not usuario.email:
+        return templates.TemplateResponse("main/pages/index.html", {"request": request})
 
 
 @router.post("/post_entrar")
