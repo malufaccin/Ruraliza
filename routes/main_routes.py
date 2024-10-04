@@ -42,10 +42,11 @@ async def post_entrar(
     return response
 
 
-@router.post("/post_cadastrar_produtor")
-async def post_cadastrar_produtor(
+@router.post("/post_cadastrar_cliente")
+async def post_cadastrar_cliente(
     nome: str = Form(...),
     email: str = Form(...),
+    cpf: str = Form(...),
     telefone: str = Form(...),
     senha: str = Form(...),
     confsenha: str = Form(...),
@@ -56,6 +57,55 @@ async def post_cadastrar_produtor(
     usuario = Usuario(
         nome=nome,
         email=email,
+        cpf=cpf,
+        telefone=telefone,
+        senha=senha_hash, 
+        perfil=perfil)
+    
+@router.post("/post_cadastrar_produtor")
+async def post_cadastrar_produtor(
+    nome: str = Form(...),
+    email: str = Form(...),
+    cpf: str = Form(...),
+    telefone: str = Form(...),
+    senha: str = Form(...),
+    confsenha: str = Form(...),
+    perfil: int = Form(...),
+    cpr: int = Form(...),
+    endereco: str = Form(...),
+    numero: int = Form(...),
+    cnpj: int = Form(...)):
+    if senha != confsenha:
+        return RedirectResponse("/cadastrar", status_code=status.HTTP_303_SEE_OTHER)
+    senha_hash = obter_hash_senha(senha)
+    usuario = Usuario(
+        nome=nome,
+        email=email,
+        cpf=cpf,
+        telefone=telefone,
+        senha=senha_hash, 
+        perfil=perfil)
+    
+@router.post("/post_cadastrar_entregador")
+async def post_cadastrar_entregador(
+    nome: str = Form(...),
+    email: str = Form(...),
+    cpf: str = Form(...),
+    telefone: str = Form(...),
+    senha: str = Form(...),
+    confsenha: str = Form(...),
+    perfil: int = Form(...),
+    tipo_veiculo: str = Form(...),
+    cor_veiculo: str = Form(...),
+    placa: str = Form(...),
+    cnh: str = Form(...)):
+    if senha != confsenha:
+        return RedirectResponse("/cadastrar", status_code=status.HTTP_303_SEE_OTHER)
+    senha_hash = obter_hash_senha(senha)
+    usuario = Usuario(
+        nome=nome,
+        email=email,
+        cpf=cpf,
         telefone=telefone,
         senha=senha_hash, 
         perfil=perfil)
