@@ -1,3 +1,4 @@
+from datetime import date
 from fastapi import APIRouter, Form, Request, status
 from fastapi.responses import HTMLResponse, RedirectResponse
 
@@ -47,9 +48,10 @@ async def post_entrar(
 @router.post("/post_cadastrar_cliente")
 async def post_cadastrar_cliente(
     nome: str = Form(...),
-    email: str = Form(...),
+    data_nascimento: date = Form(...),
     cpf: str = Form(...),
     telefone: str = Form(...),
+    email: str = Form(...),
     senha: str = Form(...),
     confsenha: str = Form(...),
     perfil: int = Form(...)):
@@ -58,38 +60,42 @@ async def post_cadastrar_cliente(
     senha_hash = obter_hash_senha(senha)
     usuario = Usuario(
         nome=nome,
-        email=email,
+        data_nascimento=data_nascimento,
         cpf=cpf,
         telefone=telefone,
+        email=email,
         senha=senha_hash, 
         perfil=perfil)
+    UsuarioRepo.inserir(usuario)
+    response = RedirectResponse("/", status.HTTP_303_SEE_OTHER)
+    return response
     
 @router.post("/post_cadastrar_produtor")
 async def post_cadastrar_produtor(
     nome: str = Form(...),
-    email: str = Form(...),
+    data_nascimento: date = Form(...),
     cpf: str = Form(...),
     telefone: str = Form(...),
+    email: str = Form(...),
     senha: str = Form(...),
     confsenha: str = Form(...),
     perfil: int = Form(...),
     cpr: int = Form(...),
     endereco: str = Form(...),
-    numero: int = Form(...),
     cnpj: int = Form(...)):
     if senha != confsenha:
         return RedirectResponse("/cadastrar", status_code=status.HTTP_303_SEE_OTHER)
     senha_hash = obter_hash_senha(senha)
     usuario = Usuario(
         nome=nome,
-        email=email,
+        data_nascimento=data_nascimento,
         cpf=cpf,
         telefone=telefone,
+        email=email,
         senha=senha_hash, 
         perfil=perfil,
         cpr=cpr,
         endereco=endereco,
-        numero=numero,
         cnpj=cnpj)
     UsuarioRepo.inserir(usuario)
     response = RedirectResponse("/", status.HTTP_303_SEE_OTHER)
@@ -98,14 +104,15 @@ async def post_cadastrar_produtor(
 @router.post("/post_cadastrar_entregador")
 async def post_cadastrar_entregador(
     nome: str = Form(...),
-    email: str = Form(...),
+    data_nascimento: date = Form(...),
     cpf: str = Form(...),
     telefone: str = Form(...),
+    email: str = Form(...),
     senha: str = Form(...),
     confsenha: str = Form(...),
     perfil: int = Form(...),
     tipo_veiculo: str = Form(...),
-    cor_veiculo: str = Form(...),
+    cor: str = Form(...),
     placa: str = Form(...),
     cnh: str = Form(...)):
     if senha != confsenha:
@@ -113,14 +120,19 @@ async def post_cadastrar_entregador(
     senha_hash = obter_hash_senha(senha)
     usuario = Usuario(
         nome=nome,
-        email=email,
+        data_nascimento=data_nascimento,
         cpf=cpf,
         telefone=telefone,
+        email=email,
         senha=senha_hash, 
-        perfil=perfil)
-
+        perfil=perfil,
+        tipo_veiculo=tipo_veiculo,
+        cor=cor,
+        placa=placa,
+        cnh=cnh)
     UsuarioRepo.inserir(usuario)
-    return RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
+    response = RedirectResponse("/", status.HTTP_303_SEE_OTHER)
+    return response
 
 @router.get("/configuracoes", response_class=HTMLResponse)
 async def get_root(request: Request):

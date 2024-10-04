@@ -37,7 +37,7 @@ class UsuarioRepo:
             print(ex)
             return None
         
-     @classmethod
+    @classmethod
     def inserir_produtor(cls, usuario: Usuario) -> Optional[Usuario]:
         try:
             with obter_conexao() as conexao:
@@ -64,7 +64,7 @@ class UsuarioRepo:
             print(ex)
             return None
         
-     @classmethod
+    @classmethod
     def inserir_entregador(cls, usuario: Usuario) -> Optional[Usuario]:
         try:
             with obter_conexao() as conexao:
