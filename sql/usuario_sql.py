@@ -4,7 +4,15 @@ SQL_CRIAR_TABELA = """
         nome TEXT NOT NULL,
         email TEXT NOT NULL UNIQUE,
         senha TEXT NOT NULL,
-        perfil INT NOT NULL,        
+        perfil INT NOT NULL,
+        cpr INT,
+        endereco TEXT,
+        numero INT,
+        cnpj INT,
+        tipo_veiculo TEXT,
+        cor TEXT,
+        placa TEXT,
+        cnh TEXT,        
         token TEXT)
 """
 
