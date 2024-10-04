@@ -2,7 +2,7 @@ SQL_CRIAR_TABELA = """
     CREATE TABLE IF NOT EXISTS usuario (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         nome TEXT NOT NULL,
-        data_nascimento DATE NOT NULL,
+        data_nascimento TEXT NOT NULL,
         cpf INT NOT NULL UNIQUE,
         telefone TEXT NOT NULL UNIQUE,
         email TEXT NOT NULL UNIQUE,
@@ -19,18 +19,18 @@ SQL_CRIAR_TABELA = """
 """
 
 SQL_INSERIR_CLIENTE = """
-    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, perfil)
-    VALUES (?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha)
+    VALUES (?, ?, ?, ?, ?, ?)
 """
 
 SQL_INSERIR_PRODUTOR = """
-    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, perfil, cpr, endereco, cnpj)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, cpr, endereco, cnpj)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
 """
 
 SQL_INSERIR_ENTREGADOR  = """
-    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, perfil, tipo_veiculo, cor, placa, cnh)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, tipo_veiculo, cor, placa, cnh)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 """
 
 SQL_ALTERAR = """
@@ -51,19 +51,19 @@ SQL_EXCLUIR = """
 """
 
 SQL_OBTER_POR_ID = """
-    SELECT id, nome, email, perfil, token
+    SELECT id, nome, email, token
     FROM usuario
     WHERE id=?
 """
 
 SQL_OBTER_POR_EMAIL = """
-    SELECT id, nome, email, perfil, token
+    SELECT id, nome, email, token
     FROM usuario
     WHERE id=?
 """
 
 SQL_OBTER_POR_TOKEN = """
-    SELECT id, nome, email, perfil, token
+    SELECT id, nome, email, token
     FROM usuario
     WHERE token=?
 """

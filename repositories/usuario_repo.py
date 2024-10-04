@@ -28,7 +28,6 @@ class UsuarioRepo:
                         usuario.telefone,
                         usuario.email,
                         usuario.senha,
-                        usuario.perfil,
                     ),
                 )
                 if cursor.rowcount > 0:
@@ -43,7 +42,7 @@ class UsuarioRepo:
             with obter_conexao() as conexao:
                 cursor = conexao.cursor()
                 cursor.execute(
-                    SQL_INSERIR_CLIENTE,
+                    SQL_INSERIR_PRODUTOR,
                     (
                         usuario.id,
                         usuario.nome,
@@ -52,10 +51,9 @@ class UsuarioRepo:
                         usuario.telefone,
                         usuario.email,
                         usuario.senha,
-                        usuario.perfil,
                         usuario.cpr,
                         usuario.endereco,
-                        usuario.cnpj
+                        usuario.cnpj,
                     ),
                 )
                 if cursor.rowcount > 0:
@@ -70,16 +68,14 @@ class UsuarioRepo:
             with obter_conexao() as conexao:
                 cursor = conexao.cursor()
                 cursor.execute(
-                    SQL_INSERIR_CLIENTE,
+                    SQL_INSERIR_ENTREGADOR,
                     (
-                        usuario.id,
                         usuario.nome,
                         usuario.data_nascimento,
                         usuario.cpf,
                         usuario.telefone,
                         usuario.email,
                         usuario.senha,
-                        usuario.perfil,
                         usuario.tipo_veiculo,
                         usuario.cor,
                         usuario.placa,

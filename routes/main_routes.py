@@ -53,10 +53,9 @@ async def post_cadastrar_cliente(
     telefone: str = Form(...),
     email: str = Form(...),
     senha: str = Form(...),
-    confsenha: str = Form(...),
-    perfil: int = Form(...)):
+    confsenha: str = Form(...)):
     if senha != confsenha:
-        return RedirectResponse("/cadastrar", status_code=status.HTTP_303_SEE_OTHER)
+        return RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
     senha_hash = obter_hash_senha(senha)
     usuario = Usuario(
         nome=nome,
@@ -64,8 +63,7 @@ async def post_cadastrar_cliente(
         cpf=cpf,
         telefone=telefone,
         email=email,
-        senha=senha_hash, 
-        perfil=perfil)
+        senha=senha_hash)
     UsuarioRepo.inserir(usuario)
     response = RedirectResponse("/", status.HTTP_303_SEE_OTHER)
     return response
@@ -73,18 +71,17 @@ async def post_cadastrar_cliente(
 @router.post("/post_cadastrar_produtor")
 async def post_cadastrar_produtor(
     nome: str = Form(...),
-    data_nascimento: date = Form(...),
+    data_nascimento: str = Form(...),
     cpf: str = Form(...),
     telefone: str = Form(...),
     email: str = Form(...),
     senha: str = Form(...),
     confsenha: str = Form(...),
-    perfil: int = Form(...),
     cpr: int = Form(...),
     endereco: str = Form(...),
     cnpj: int = Form(...)):
     if senha != confsenha:
-        return RedirectResponse("/cadastrar", status_code=status.HTTP_303_SEE_OTHER)
+        return RedirectResponse("/cadastro", status_code=status.HTTP_303_SEE_OTHER)
     senha_hash = obter_hash_senha(senha)
     usuario = Usuario(
         nome=nome,
@@ -92,12 +89,11 @@ async def post_cadastrar_produtor(
         cpf=cpf,
         telefone=telefone,
         email=email,
-        senha=senha_hash, 
-        perfil=perfil,
+        senha=senha_hash,
         cpr=cpr,
         endereco=endereco,
-        cnpj=cnpj)
-    UsuarioRepo.inserir(usuario)
+        cnpj=cnpj,)
+    UsuarioRepo.inserir_produtor(usuario)
     response = RedirectResponse("/", status.HTTP_303_SEE_OTHER)
     return response
     
@@ -110,7 +106,6 @@ async def post_cadastrar_entregador(
     email: str = Form(...),
     senha: str = Form(...),
     confsenha: str = Form(...),
-    perfil: int = Form(...),
     tipo_veiculo: str = Form(...),
     cor: str = Form(...),
     placa: str = Form(...),
@@ -125,7 +120,6 @@ async def post_cadastrar_entregador(
         telefone=telefone,
         email=email,
         senha=senha_hash, 
-        perfil=perfil,
         tipo_veiculo=tipo_veiculo,
         cor=cor,
         placa=placa,
