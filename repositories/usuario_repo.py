@@ -14,28 +14,76 @@ class UsuarioRepo:
             cursor.execute(SQL_CRIAR_TABELA)
 
     @classmethod
-    def inserir(cls, usuario: Usuario) -> Optional[Usuario]:
+    def inserir_cliente(cls, usuario: Usuario) -> Optional[Usuario]:
         try:
             with obter_conexao() as conexao:
                 cursor = conexao.cursor()
                 cursor.execute(
-                    SQL_INSERIR,
+                    SQL_INSERIR_CLIENTE,
                     (
                         usuario.id,
                         usuario.nome,
-                        usuario.email,
-                        usuario.cpf,
                         usuario.data_nascimento,
+                        usuario.cpf,
+                        usuario.telefone,
+                        usuario.email,
                         usuario.senha,
+                        usuario.perfil,
+                    ),
+                )
+                if cursor.rowcount > 0:
+                    return usuario
+        except sqlite3.Error as ex:
+            print(ex)
+            return None
+        
+     @classmethod
+    def inserir_produtor(cls, usuario: Usuario) -> Optional[Usuario]:
+        try:
+            with obter_conexao() as conexao:
+                cursor = conexao.cursor()
+                cursor.execute(
+                    SQL_INSERIR_CLIENTE,
+                    (
+                        usuario.id,
+                        usuario.nome,
+                        usuario.data_nascimento,
+                        usuario.cpf,
+                        usuario.telefone,
+                        usuario.email,
+                        usuario.senha,
+                        usuario.perfil,
                         usuario.cpr,
                         usuario.endereco,
-                        usuario.numero,
-                        usuario.cnpj,
+                        usuario.cnpj
+                    ),
+                )
+                if cursor.rowcount > 0:
+                    return usuario
+        except sqlite3.Error as ex:
+            print(ex)
+            return None
+        
+     @classmethod
+    def inserir_entregador(cls, usuario: Usuario) -> Optional[Usuario]:
+        try:
+            with obter_conexao() as conexao:
+                cursor = conexao.cursor()
+                cursor.execute(
+                    SQL_INSERIR_CLIENTE,
+                    (
+                        usuario.id,
+                        usuario.nome,
+                        usuario.data_nascimento,
+                        usuario.cpf,
+                        usuario.telefone,
+                        usuario.email,
+                        usuario.senha,
+                        usuario.perfil,
                         usuario.tipo_veiculo,
                         usuario.cor,
                         usuario.placa,
                         usuario.cnh,
-                        usuario.perfil,
                     ),
                 )
                 if cursor.rowcount > 0:

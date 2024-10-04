@@ -2,14 +2,14 @@ SQL_CRIAR_TABELA = """
     CREATE TABLE IF NOT EXISTS usuario (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         nome TEXT NOT NULL,
-        email TEXT NOT NULL UNIQUE,
-        cpf INT NOT NULL UNIQUE,
         data_nascimento DATE NOT NULL,
+        cpf INT NOT NULL UNIQUE,
+        telefone TEXT NOT NULL UNIQUE,
+        email TEXT NOT NULL UNIQUE,
         senha TEXT NOT NULL,
         perfil INT NOT NULL,
         cpr INT,
         endereco TEXT,
-        numero INT,
         cnpj INT,
         tipo_veiculo TEXT,
         cor TEXT,
@@ -18,9 +18,19 @@ SQL_CRIAR_TABELA = """
         token TEXT)
 """
 
-SQL_INSERIR = """
-    INSERT INTO usuario(id, nome, email, senha, perfil)
-    VALUES (?, ?, ?)
+SQL_INSERIR_CLIENTE = """
+    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, perfil)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
+"""
+
+SQL_INSERIR_PRODUTOR = """
+    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, perfil, cpr, endereco, cnpj)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"""
+
+SQL_INSERIR_ENTREGADOR  = """
+    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, perfil, tipo_veiculo, cor, placa, cnh)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 """
 
 SQL_ALTERAR = """

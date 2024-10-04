@@ -86,7 +86,14 @@ async def post_cadastrar_produtor(
         cpf=cpf,
         telefone=telefone,
         senha=senha_hash, 
-        perfil=perfil)
+        perfil=perfil,
+        cpr=cpr,
+        endereco=endereco,
+        numero=numero,
+        cnpj=cnpj)
+    UsuarioRepo.inserir(usuario)
+    response = RedirectResponse("/", status.HTTP_303_SEE_OTHER)
+    return response
     
 @router.post("/post_cadastrar_entregador")
 async def post_cadastrar_entregador(
