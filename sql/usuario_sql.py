@@ -3,6 +3,7 @@ SQL_CRIAR_TABELA = """
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         nome TEXT NOT NULL,
         email TEXT NOT NULL UNIQUE,
+        cpf INT NOT NULL UNIQUE,
         data_nascimento DATE NOT NULL,
         senha TEXT NOT NULL,
         perfil INT NOT NULL,
