@@ -44,13 +44,13 @@ class UsuarioRepo:
                 cursor.execute(
                     SQL_INSERIR_PRODUTOR,
                     (
-                        usuario.id,
                         usuario.nome,
                         usuario.data_nascimento,
                         usuario.cpf,
                         usuario.telefone,
                         usuario.email,
                         usuario.senha,
+                        usuario.perfil,
                         usuario.cpr,
                         usuario.endereco,
                         usuario.cnpj,

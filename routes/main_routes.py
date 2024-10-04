@@ -90,6 +90,7 @@ async def post_cadastrar_produtor(
         telefone=telefone,
         email=email,
         senha=senha_hash,
+        perfil = 1,
         cpr=cpr,
         endereco=endereco,
         cnpj=cnpj)

@@ -12,6 +12,7 @@ class Usuario:
     telefone: Optional[str] = None
     email: Optional[str] = None
     senha: Optional[str] = None
+    perfil: Optional[int] = None
     cpr: Optional[int] = None
     endereco: Optional[str] = None
     cnpj: Optional[int] = None

@@ -24,8 +24,8 @@ SQL_INSERIR_CLIENTE = """
 """
 
 SQL_INSERIR_PRODUTOR = """
-    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, cpr, endereco, cnpj)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, perfil, cpr, endereco, cnpj)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 """
 
 SQL_INSERIR_ENTREGADOR  = """
