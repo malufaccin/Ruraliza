@@ -19,8 +19,8 @@ SQL_CRIAR_TABELA = """
 """
 
 SQL_INSERIR_CLIENTE = """
-    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha)
-    VALUES (?, ?, ?, ?, ?, ?)
+    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, perfil)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
 """
 
 SQL_INSERIR_PRODUTOR = """
@@ -29,8 +29,8 @@ SQL_INSERIR_PRODUTOR = """
 """
 
 SQL_INSERIR_ENTREGADOR  = """
-    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, tipo_veiculo, cor, placa, cnh)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, perfil, tipo_veiculo, cor, placa, cnh)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 """
 
 SQL_ALTERAR = """
