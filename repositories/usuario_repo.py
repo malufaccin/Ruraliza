@@ -81,7 +81,7 @@ class UsuarioRepo:
                         usuario.tipo_veiculo,
                         usuario.cor,
                         usuario.placa,
-                        usuario.cnh,
+                        usuario.cnh
                     ),
                 )
                 if cursor.rowcount > 0:

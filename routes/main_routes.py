@@ -98,7 +98,7 @@ async def post_cadastrar_produtor(
     UsuarioRepo.inserir_produtor(usuario)
     response = RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
     return response
-    
+
 @router.post("/post_cadastrar_entregador")
 async def post_cadastrar_entregador(
     nome: str = Form(...),
@@ -111,9 +111,9 @@ async def post_cadastrar_entregador(
     tipo_veiculo: str = Form(...),
     cor: str = Form(...),
     placa: str = Form(...),
-    cnh: str = Form(...)):
+    cnh: str = Form(...),):
     if senha != confsenha:
-        return RedirectResponse("/cadastrar", status_code=status.HTTP_303_SEE_OTHER)
+        return RedirectResponse("/cadastro", status_code=status.HTTP_303_SEE_OTHER)
     senha_hash = obter_hash_senha(senha)
     usuario = Usuario(
         nome=nome,
@@ -121,14 +121,14 @@ async def post_cadastrar_entregador(
         cpf=cpf,
         telefone=telefone,
         email=email,
-        senha=senha_hash, 
+        senha=senha_hash,
         perfil = 3,
         tipo_veiculo=tipo_veiculo,
         cor=cor,
         placa=placa,
         cnh=cnh)
     UsuarioRepo.inserir_entregador(usuario)
-    response = RedirectResponse("/", status.HTTP_303_SEE_OTHER)
+    response = RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
     return response
 
 @router.get("/configuracoes", response_class=HTMLResponse)
