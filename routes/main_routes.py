@@ -3,7 +3,7 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 
 from models.usuario_model import Usuario
 from repositories.usuario_repo import UsuarioRepo
-from util.auth import NOME_COOKIE_AUTH, criar_token, obter_hash_senha
+from util.auth import NOME_COOKIE_AUTH, criar_token, obter_hash_senha 
 from util.templates import obter_jinja_templates
 
 router = APIRouter()
