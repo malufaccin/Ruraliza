@@ -18,6 +18,11 @@ SQL_CRIAR_TABELA = """
         token TEXT)
 """
 
+SQL_INSERIR_ADMIN = """
+    INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, perfil)
+    VALUES (?, ?, ?, ?, ?, ?, 4)
+"""
+
 SQL_INSERIR_CLIENTE = """
     INSERT INTO usuario(nome, data_nascimento, cpf, telefone, email, senha, perfil)
     VALUES (?, ?, ?, ?, ?, ?, ?)

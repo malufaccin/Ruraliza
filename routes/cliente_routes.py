@@ -8,7 +8,7 @@ templates = obter_jinja_templates("templates")
 
 @router.get("/", response_class=HTMLResponse)
 async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/index_usuario.html", {"request": request})
+    return templates.TemplateResponse("main/pages/index_cliente.html", {"request": request})
 
 @router.get("/rastreio_enviado", response_class=HTMLResponse)
 async def get_root(request: Request):

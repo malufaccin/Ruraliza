@@ -11,6 +11,7 @@ from util.exceptions import configurar_excecoes
 from util.auth import checar_autenticacao, checar_autorizacao
 
 UsuarioRepo.criar_tabela()
+UsuarioRepo.inserir_admin()
 dotenv.load_dotenv()
 app = FastAPI(dependencies=[Depends(checar_autorizacao)])
 app.mount(path="/static", app=StaticFiles(directory="static"), name="static")

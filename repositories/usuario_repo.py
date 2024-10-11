@@ -4,7 +4,7 @@ from typing import Optional
 from models.usuario_model import Usuario
 from sql.usuario_sql import *
 from util.database import obter_conexao
-from util.auth import conferir_senha
+from util.auth import conferir_senha, obter_hash_senha
 
 
 class UsuarioRepo:
@@ -13,6 +13,29 @@ class UsuarioRepo:
         with obter_conexao() as conexao:
             cursor = conexao.cursor()
             cursor.execute(SQL_CRIAR_TABELA)
+
+
+    @classmethod
+    def inserir_admin(cls) -> bool:
+        try:
+            with obter_conexao() as conexao:
+                cursor = conexao.cursor()
+                cursor.execute(
+                    SQL_INSERIR_ADMIN,
+                    (
+                        "Administrador Padrão",
+                        "2000-01-01",
+                        "12345678901",
+                        "28123456789",
+                        "admin@email.com",
+                        obter_hash_senha("12345678")
+                    ),
+                )
+                if cursor.rowcount > 0:
+                    return True
+        except sqlite3.Error as ex:
+            print(ex)
+            return False
 
     @classmethod
     def inserir_cliente(cls, usuario: Usuario) -> Optional[Usuario]:

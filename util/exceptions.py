@@ -15,7 +15,7 @@ def configurar_excecoes(app: FastAPI):
     async def unauthorized_exception_handler(request: Request, _):
         return_url = f"?return_url={request.url.path}"
         response = RedirectResponse(
-            f"/entrar{return_url}", status_code=status.HTTP_302_FOUND
+            f"/login{return_url}", status_code=status.HTTP_302_FOUND
         )
         adicionar_mensagem_erro(
             response,
@@ -42,7 +42,7 @@ def configurar_excecoes(app: FastAPI):
             return response
         else:
             response = RedirectResponse(
-                f"/entrar{return_url}", status_code=status.HTTP_302_FOUND
+                f"/login{return_url}", status_code=status.HTTP_302_FOUND
             )
             adicionar_mensagem_erro(
                 response,

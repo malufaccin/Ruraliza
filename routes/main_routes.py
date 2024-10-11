@@ -14,7 +14,19 @@ templates = obter_jinja_templates("templates")
 @router.get("/", response_class=HTMLResponse)
 async def get_root(request: Request):
     usuario = request.state.usuario if hasattr(request.state, "usuario") else None
-    if not usuario or not usuario.email:
+    if usuario:
+        nome_perfil = None
+        match usuario.perfil:
+            case 1:
+                nome_perfil="produtor"
+            case 2:
+                nome_perfil="cliente"
+            case 3:
+                nome_perfil="entregador"
+            case 4:
+                nome_perfil="adm"
+        return RedirectResponse(f"/{nome_perfil}", 303)
+    else:
         return templates.TemplateResponse("main/pages/index.html", {"request": request})
 
 
