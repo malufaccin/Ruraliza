@@ -24,7 +24,7 @@ async def post_entrar(
     senha: str = Form(...)):
     usuario = UsuarioRepo.checar_credenciais(email, senha)
     if usuario is None:
-        response = RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
+        response = RedirectResponse("/login", status_code=status.HTTP_303_SEE_OTHER)
         return response
     token = criar_token(usuario[0], usuario[1], usuario[2])
     nome_perfil = None
