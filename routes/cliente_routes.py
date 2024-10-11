@@ -26,21 +26,9 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/montar_box.html", {"request": request})
 
-@router.get("/meus_dados", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/meus_dados.html", {"request": request})
-
 @router.get("/cesta", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/cesta.html", {"request": request})
-
-@router.get("/enderecos", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/enderecos.html", {"request": request})
-
-@router.get("/adicionar_endereco", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("/main/pages/adicionar_endereco.html", {"request": request})
 
 @router.get("/avaliar", response_class=HTMLResponse)
 async def get_root(request: Request):
@@ -58,18 +46,6 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/fazer_pedido.html", {"request": request})
 
-@router.get("/feedback", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/feedback.html", {"request": request})
-
-@router.get("/lista_mensagens", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/lista_mensagens.html", {"request": request})
-
 @router.get("/perfis_seguindo", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/perfis_seguindo.html", {"request": request})
-
-@router.get("/mudar_conta", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/mudar_conta.html", {"request": request})
