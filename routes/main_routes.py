@@ -275,6 +275,10 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/lista_mensagens.html", {"request": request})
 
+@router.get("/pedidos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/pedidos.html", {"request": request})
+
 @router.get("/cesta", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/cesta.html", {"request": request})
