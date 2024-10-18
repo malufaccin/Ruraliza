@@ -5,6 +5,7 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 from models.usuario_model import Usuario
 from repositories.usuario_repo import UsuarioRepo
 from util.auth import NOME_COOKIE_AUTH, criar_token, obter_hash_senha 
+from util.mensagens import adicionar_mensagem_erro, adicionar_mensagem_sucesso
 from util.templates import obter_jinja_templates
 
 router = APIRouter()
@@ -37,6 +38,7 @@ async def post_entrar(
     usuario = UsuarioRepo.checar_credenciais(email, senha)
     if usuario is None:
         response = RedirectResponse("/login", status_code=status.HTTP_303_SEE_OTHER)
+        adicionar_mensagem_erro(response, "Credenciais inválidas. Tente novamente.")
         return response
     token = criar_token(usuario[0], usuario[1], usuario[2])
     nome_perfil = None
@@ -54,6 +56,7 @@ async def post_entrar(
         httponly=True,
         samesite="lax"
     )
+    adicionar_mensagem_sucesso(response, "Login realizado com sucesso!")
     return response
 
 
