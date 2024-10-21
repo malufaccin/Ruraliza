@@ -10,13 +10,17 @@ templates = obter_jinja_templates("templates")
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/index_adm.html", {"request": request})
 
-@router.get("/exclusao", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/exc_not.html", {"request": request})
-
 @router.get("/cadastrar_categorias", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/cadastrar_categorias.html", {"request": request})
+
+@router.get("/editar_conta", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/editar_conta.html", {"request": request})
+
+@router.get("/exclusao", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/exc_not.html", {"request": request})
 
 @router.get("/gerenciar_anuncios", response_class=HTMLResponse)
 async def get_root(request: Request):
@@ -30,10 +34,14 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/gerenciar_categorias.html", {"request": request})
 
-@router.get("/editar_conta", response_class=HTMLResponse)
+@router.get("/lista_mensagens", response_class=HTMLResponse)
 async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/editar_conta.html", {"request": request})
+    return templates.TemplateResponse("main/pages/lista_mensagens.html", {"request": request})
 
 @router.get("/perfil_administrador", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/perfil_administrador.html", {"request": request})
+
+@router.get("/pedidos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/pedidos.html", {"request": request})

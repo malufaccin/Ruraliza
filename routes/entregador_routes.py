@@ -10,18 +10,26 @@ templates = obter_jinja_templates("templates")
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/index_entregador.html", {"request": request})
 
-@router.get("/visualizar_entrega", response_class=HTMLResponse)
+@router.get("/finalizar_entrega", response_class=HTMLResponse)
 async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/visualizar_entrega.html", {"request": request})
+    return templates.TemplateResponse("main/pages/finalizar_entrega.html", {"request": request})
+
+@router.get("/lista_mensagens", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/lista_mensagens.html", {"request": request})
 
 @router.get("/pagina_entregas", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/pagina_entregas.html", {"request": request})
 
-@router.get("/finalizar_entrega", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/finalizar_entrega.html", {"request": request})
-
 @router.get("/perfil_entregador", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/perfil_entregador.html", {"request": request})
+
+@router.get("/pedidos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/pedidos.html", {"request": request})
+
+@router.get("/visualizar_entrega", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/visualizar_entrega.html", {"request": request})
