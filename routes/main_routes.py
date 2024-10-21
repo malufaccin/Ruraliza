@@ -202,6 +202,10 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/contatos.html", {"request": request})
 
+@router.get("/cupons", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/cupons.html", {"request": request})
+
 @router.get("/criar_conta_cliente1", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/criar_conta_cliente1.html", {"request": request})
@@ -241,6 +245,10 @@ async def get_root(request: Request):
 @router.get("/enderecos", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/enderecos.html", {"request": request})
+
+@router.get("/fazer_pedido", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("main/pages/fazer_pedido.html", {"request": request})
 
 @router.get("/feedback", response_class=HTMLResponse)
 async def get_root(request: Request):
