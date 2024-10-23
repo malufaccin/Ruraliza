@@ -1,4 +1,5 @@
 {% extends "pages/base_login.html" %}
+{% from "shared/macros.html" import input_email, input_password %}
 {% block subtitulo %}Entrar{% endblock %}
 {% block conteudo %}
   <div class="container">
@@ -11,12 +12,8 @@
           <div class="col-5 mt-5 mb-4 mx-auto px-auto">
             <h1 class="text-center fw-semibold" style="color: #47525E">Entrar</h1>
           </div>
-          <div class="col-8 mb-2 mx-auto">
-            <input type="text" name="email" id="email" placeholder="E-mail" class="form-control">
-          </div>
-          <div class="col-8 mb-3 mx-auto">
-            <input type="password" name="senha" id="senha" placeholder="Senha" class="form-control">
-          </div>
+          {{ input_email("email", "E-mail", div_classes="col-8 mb-2 mx-auto") }}
+          {{ input_password("senha", "Senha", div_classes="col-8 mb-3 mx-auto") }}
           <div class="col-3 mb-1 mx-auto ps-2">
             <button class="btn btn-dark btn-lg" type="submit">Entrar</button>
           </div>
