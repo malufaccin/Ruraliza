@@ -24,18 +24,9 @@
           {{ input_password("conf_senha", "Confirme a Senha:", "Confirme a Senha", div_classes="col-12 mt-4 mb-3 mx-auto") }}
         </div>
         <div id="step3" class="step d-none">
-          <div class="col-12 mb-3 mx-auto">
-            <label for="nome" class="form-label">CPR:</label>
-            <input type="text" name="cpr" id="cpr" placeholder="CPR" class="form-control">
-          </div>
-            <div class="col-12 mb-3 mx-auto ">
-              <label for="endereco" class="form-label">Endereço:</label>
-              <input type="text" name="endereco" id="endereco" placeholder="CEP[XX.XXX-XXX]" class="form-control">
-            </div>
-          <div class="col-12 mb-3 mx-auto">
-            <label for="cnpj" class="form-label">CNPJ:</label>
-            <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ[XX.XXX.XXX/0001-XX]" class="form-control">
-          </div>
+          {{ input_text("cpr", "CPR:", "CPR", div_classes="col-12 mb-3 mx-auto") }}
+          {{ input_text("endereco", "Endereço:", "CEP", div_classes="col-12 mb-3 mx-auto") }}
+          {{ input_text("cnpj", "CNPJ:", "CNPJ", div_classes="col-12 mb-3 mx-auto") }}
           <div class="col-3 mb-3 my-5 mx-auto">
             <button class="btn btn-success fs-4" type="submit">Cadastrar</button>
           </div>

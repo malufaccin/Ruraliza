@@ -25,24 +25,11 @@
         </div>
         <div id="step3" class="step d-none">
           <div class="row col-12 mb-3">
-            <div class="col-7">
-              <label for="tipo_veiculo" class="form-label">Tipo de Veículo:</label>
-              <input type="text" name="tipo_veiculo" id="tipo_veiculo" placeholder="Tipo de Veículo"
-                class="form-control">
-            </div>
-            <div class="col-5">
-              <label for="cor" class="form-label">Cor:</label>
-              <input type="text" name="cor" id="cor" placeholder="Cor" class="form-control">
-            </div>
+            {{ input_text("tipo_veiculo", "Tipo de Veículo:", "Tipo de Veículo", div_classes="col-7") }}
+            {{ input_text("cor", "Cor:", "Cor", div_classes="col-5") }}
           </div>
-          <div class="col-12 mb-3 mx-auto">
-            <label for="placa" class="form-label">Placa:</label>
-            <input type="text" name="placa" id="placa" placeholder="Placa" class="form-control">
-          </div>
-          <div class="col-12 mb-3 mx-auto">
-            <label for="cnh" class="form-label">CNH:</label>
-            <input type="text" name="cnh" id="cnh" placeholder="CNH" class="form-control">
-          </div>
+            {{ input_text("placa", "Placa:", "Placa", div_classes="col-12 mb-3 mx-auto") }}
+            {{ input_text("cnh", "CNH:", "CNH", div_classes="col-12 mb-3 mx-auto") }}
           <div class="col-3 my-5 mx-auto">
             <button class="btn btn-success fs-4 ms-2" type="submit">Cadastrar</button>
           </div>
