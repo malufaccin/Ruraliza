@@ -5,6 +5,7 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 from models.usuario_model import Usuario
 from repositories.usuario_repo import UsuarioRepo
 from util.auth import NOME_COOKIE_AUTH, criar_token, obter_hash_senha 
+from util.cookies import adicionar_cookie_auth, excluir_cookie_auth
 from util.mensagens import adicionar_mensagem_erro, adicionar_mensagem_sucesso
 from util.templates import obter_jinja_templates
 
@@ -49,13 +50,7 @@ async def post_entrar(
         case 4: nome_perfil = "administrador"
         case _: nome_perfil = ""    
     response = RedirectResponse(f"/{nome_perfil}", status_code=status.HTTP_303_SEE_OTHER)    
-    response.set_cookie(
-        key=NOME_COOKIE_AUTH,
-        value=token,
-        max_age=3600*24*365*10,
-        httponly=True,
-        samesite="lax"
-    )
+    adicionar_cookie_auth(response, token)
     adicionar_mensagem_sucesso(response, "Login realizado com sucesso!")
     return response
 
@@ -309,3 +304,9 @@ async def get_root(request: Request):
 @router.get("/termos", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/termos.html", {"request": request})
+
+@router.get("/sair")
+async def get_sair(request: Request):
+    response = RedirectResponse("/", 303)
+    excluir_cookie_auth(response)
+    return response

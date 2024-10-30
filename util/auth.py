@@ -6,8 +6,7 @@ from datetime import timedelta
 from fastapi import HTTPException, Request, status
 
 from dtos.usuario_autenticado import UsuarioAutenticado
-
-NOME_COOKIE_AUTH = "jwt-token"
+from util.cookies import NOME_COOKIE_AUTH
 
 async def obter_usuario_logado(request: Request) -> dict:
     try:
@@ -92,14 +91,3 @@ def validar_token(token: str) -> dict:
         return { "nome": None, "email": None, "perfil": 0, "mensagem": "Token inválido" }        
     except Exception as e:
         return { "nome": None, "email": None, "perfil": 0, "mensagem": f"Erro: {e}" }
-    
-
-def criar_cookie_auth(response, token):
-    response.set_cookie(
-        key=NOME_COOKIE_AUTH,
-        value=token,
-        max_age=1800,
-        httponly=True,
-        samesite="lax",
-    )
-    return response
